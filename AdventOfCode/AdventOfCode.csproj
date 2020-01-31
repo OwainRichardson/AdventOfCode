@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -55,10 +58,21 @@
     <Compile Include="2015\D_06_1.cs" />
     <Compile Include="2015\D_05_2.cs" />
     <Compile Include="2015\D_05_1.cs" />
+    <Compile Include="2015\D_09_2.cs" />
+    <Compile Include="2015\D_09_1.cs" />
+    <Compile Include="2015\D_08_2.cs" />
+    <Compile Include="2015\D_08_1.cs" />
     <Compile Include="2015\D_07_2.cs" />
     <Compile Include="2015\D_07_1.cs" />
+    <Compile Include="2015\D_12_2.cs" />
+    <Compile Include="2015\D_12_1.cs" />
+    <Compile Include="2015\D_11_2.cs" />
+    <Compile Include="2015\D_11_1.cs" />
+    <Compile Include="2015\D_10_1.cs" />
     <Compile Include="2015\Models\Coord.cs" />
+    <Compile Include="2015\Models\JourneyDistance.cs" />
     <Compile Include="2015\Models\LightCoords.cs" />
+    <Compile Include="2015\Models\Route.cs" />
     <Compile Include="2015\Models\Wire.cs" />
     <Compile Include="Common\CustomConsoleColour.cs" />
     <Compile Include="Program.cs" />
@@ -66,8 +80,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="2015\Data\day12_full.txt" />
+    <Content Include="2015\Data\day9_full.txt" />
+    <Content Include="2015\Data\day8_full.txt" />
     <Content Include="2015\Data\day7_full.txt" />
     <Content Include="2015\Data\day6_full.txt" />
     <Content Include="2015\Data\day5_full.txt" />
