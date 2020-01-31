@@ -36,8 +36,13 @@ namespace AdventOfCode
 
             Console.WriteLine();
             Console.WriteLine("Day 6");
-            _2015.D_05_1.Execute();
-            _2015.D_05_2.Execute();
+            _2015.D_06_1.Execute();
+            _2015.D_06_2.Execute();
+
+            Console.WriteLine();
+            Console.WriteLine("Day 7");
+            _2015.D_07_1.Execute();
+            _2015.D_07_2.Execute();
         }
     }
 }

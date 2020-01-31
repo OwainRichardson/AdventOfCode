@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AdventOfCode.Common;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -20,7 +21,9 @@ namespace AdventOfCode._2015
                 _totalSquareFeet += CalculateRibbon(present);
             }
 
+            CustomConsoleColour.SetAnswerColour();
             Console.WriteLine(_totalSquareFeet);
+            Console.ResetColor();
         }
 
         private static int CalculateRibbon(string input)

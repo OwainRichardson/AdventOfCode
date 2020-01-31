@@ -1,4 +1,5 @@
 ﻿using AdventOfCode._2015.Models;
+using AdventOfCode.Common;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -117,7 +118,9 @@ namespace AdventOfCode._2015
                 }
             }
 
+            CustomConsoleColour.SetAnswerColour();
             Console.WriteLine(coords.Count());
+            Console.ResetColor();
         }
     }
 }

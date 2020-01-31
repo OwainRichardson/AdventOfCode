@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AdventOfCode.Common;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -21,7 +22,9 @@ namespace AdventOfCode._2015
                 IsWordNaughtyOrNice(word);
             }
 
+            CustomConsoleColour.SetAnswerColour();
             Console.WriteLine(_nice);
+            Console.ResetColor();
         }
 
         private static void IsWordNaughtyOrNice(string word)

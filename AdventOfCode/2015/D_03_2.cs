@@ -1,4 +1,5 @@
 ﻿using AdventOfCode._2015.Models;
+using AdventOfCode.Common;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -27,7 +28,9 @@ namespace AdventOfCode._2015
                 MoveRoboSanta(input[i + 1]);
             }
 
+            CustomConsoleColour.SetAnswerColour();
             Console.WriteLine(coords.Count());
+            Console.ResetColor();
         }
 
         private static void MoveRoboSanta(char v)

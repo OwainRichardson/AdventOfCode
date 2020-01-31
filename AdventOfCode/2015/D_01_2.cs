@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AdventOfCode.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -33,7 +34,13 @@ namespace AdventOfCode._2015
 
                 if (floor == -1)
                 {
-                    Console.WriteLine($"First time in the basement is step: {index}");
+                    Console.Write($"First time in the basement is step: ");
+
+                    CustomConsoleColour.SetAnswerColour();
+                    Console.Write(index);
+                    Console.ResetColor();
+
+                    Console.WriteLine();
                     break;
                 }
 

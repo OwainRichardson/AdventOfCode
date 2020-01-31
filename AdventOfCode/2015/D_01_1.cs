@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AdventOfCode.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +15,13 @@ namespace AdventOfCode._2015
 
             int floor = CalculateFloor(input);
 
-            Console.WriteLine($"Floor = {floor}");
+            Console.Write($"Floor: ");
+
+            CustomConsoleColour.SetAnswerColour();
+            Console.Write(floor);
+            Console.ResetColor();
+
+            Console.WriteLine();
         }
 
         private static int CalculateFloor(string input)

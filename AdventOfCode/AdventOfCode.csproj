@@ -51,9 +51,16 @@
     <Compile Include="2015\D_02_1.cs" />
     <Compile Include="2015\D_04_2.cs" />
     <Compile Include="2015\D_04_1.cs" />
+    <Compile Include="2015\D_06_2.cs" />
+    <Compile Include="2015\D_06_1.cs" />
     <Compile Include="2015\D_05_2.cs" />
     <Compile Include="2015\D_05_1.cs" />
+    <Compile Include="2015\D_07_2.cs" />
+    <Compile Include="2015\D_07_1.cs" />
     <Compile Include="2015\Models\Coord.cs" />
+    <Compile Include="2015\Models\LightCoords.cs" />
+    <Compile Include="2015\Models\Wire.cs" />
+    <Compile Include="Common\CustomConsoleColour.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -61,6 +68,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="2015\Data\day7_full.txt" />
+    <Content Include="2015\Data\day6_full.txt" />
     <Content Include="2015\Data\day5_full.txt" />
     <Content Include="2015\Data\day3_full.txt" />
     <Content Include="2015\Data\day2_full.txt" />

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AdventOfCode.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
@@ -21,7 +22,9 @@ namespace AdventOfCode._2015
                 secretKey = CalculateMD5Hash($"{input}{index}");
             }
 
+            CustomConsoleColour.SetAnswerColour();
             Console.WriteLine(index);
+            Console.ResetColor();
         }
 
         public static string CalculateMD5Hash(string input)
