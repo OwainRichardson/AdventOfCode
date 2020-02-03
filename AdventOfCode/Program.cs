@@ -10,6 +10,23 @@ namespace AdventOfCode
     {
         static void Main(string[] args)
         {
+            //Run2015();
+            Run2016();
+        }
+
+        private static void Run2016()
+        {
+            Console.WriteLine("Day 1");
+            _2016.D_01_1.Execute();
+            _2016.D_01_2.Execute();
+
+            Console.WriteLine("Day 2");
+            _2016.D_02_1.Execute();
+            _2016.D_02_2.Execute();
+        }
+
+        public static void Run2015()
+        { 
             Console.WriteLine("Day 1");
             _2015.D_01_1.Execute();
             _2015.D_01_2.Execute();
