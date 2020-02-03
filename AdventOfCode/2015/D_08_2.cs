@@ -19,7 +19,7 @@ namespace AdventOfCode._2015
 
         public static void Execute()
         {
-            var input = File.ReadAllLines(@"C:\Work\Misc Projects\AdventOfCode\AdventOfCode\AdventOfCode\2015\Data\day8_full.txt");
+            var input = File.ReadAllLines(@"C:\Work\Misc Projects\AdventOfCode\AdventOfCode\AdventOfCode\2015\Data\day08_full.txt");
 
             Encoding ascii = Encoding.ASCII;
 

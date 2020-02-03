@@ -18,7 +18,7 @@ namespace AdventOfCode._2015
 
         public static void Execute()
         {
-            var input = File.ReadAllLines(@"C:\Work\Misc Projects\AdventOfCode\AdventOfCode\AdventOfCode\2015\Data\day9_full.txt");
+            var input = File.ReadAllLines(@"C:\Work\Misc Projects\AdventOfCode\AdventOfCode\AdventOfCode\2015\Data\day09_full.txt");
 
             ParseInput(input);
             List<string> places = CalculateTotalPlaces();

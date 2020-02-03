@@ -15,7 +15,7 @@ namespace AdventOfCode._2015
 
         public static void Execute()
         {
-            var circuit = File.ReadAllLines(@"C:\Work\Misc Projects\AdventOfCode\AdventOfCode\AdventOfCode\2015\Data\day7_full.txt");
+            var circuit = File.ReadAllLines(@"C:\Work\Misc Projects\AdventOfCode\AdventOfCode\AdventOfCode\2015\Data\day07_full.txt");
 
             ParseInput(circuit);
 

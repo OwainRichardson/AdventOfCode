@@ -14,7 +14,7 @@ namespace AdventOfCode._2015
 
         public static void Execute()
         {
-            var presents = File.ReadAllLines(@"C:\Work\Misc Projects\AdventOfCode\AdventOfCode\AdventOfCode\2015\Data\day2_full.txt");
+            var presents = File.ReadAllLines(@"C:\Work\Misc Projects\AdventOfCode\AdventOfCode\AdventOfCode\2015\Data\day02_full.txt");
 
             foreach (var present in presents)
             {

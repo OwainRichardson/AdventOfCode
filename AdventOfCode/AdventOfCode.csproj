@@ -69,10 +69,31 @@
     <Compile Include="2015\D_11_2.cs" />
     <Compile Include="2015\D_11_1.cs" />
     <Compile Include="2015\D_10_1.cs" />
+    <Compile Include="2015\D_19_2.cs" />
+    <Compile Include="2015\D_19_1.cs" />
+    <Compile Include="2015\D_18_2.cs" />
+    <Compile Include="2015\D_18_1.cs" />
+    <Compile Include="2015\D_17_1.cs" />
+    <Compile Include="2015\D_16_2.cs" />
+    <Compile Include="2015\D_16_1.cs" />
+    <Compile Include="2015\D_15_2.cs" />
+    <Compile Include="2015\D_15_1.cs" />
+    <Compile Include="2015\D_14_2.cs" />
+    <Compile Include="2015\D_14_1.cs" />
+    <Compile Include="2015\D_13_2.cs" />
+    <Compile Include="2015\D_13_1.cs" />
+    <Compile Include="2015\External\D_17_2.cs" />
+    <Compile Include="2015\Models\Arrangement.cs" />
     <Compile Include="2015\Models\Coord.cs" />
+    <Compile Include="2015\Models\DinnerGuest.cs" />
+    <Compile Include="2015\Models\Ingredient.cs" />
+    <Compile Include="2015\Models\IngredientScore.cs" />
     <Compile Include="2015\Models\JourneyDistance.cs" />
     <Compile Include="2015\Models\LightCoords.cs" />
+    <Compile Include="2015\Models\Reindeer.cs" />
+    <Compile Include="2015\Models\Replacement.cs" />
     <Compile Include="2015\Models\Route.cs" />
+    <Compile Include="2015\Models\Score.cs" />
     <Compile Include="2015\Models\Wire.cs" />
     <Compile Include="Common\CustomConsoleColour.cs" />
     <Compile Include="Program.cs" />
@@ -84,13 +105,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="2015\Data\day12_full.txt" />
-    <Content Include="2015\Data\day9_full.txt" />
-    <Content Include="2015\Data\day8_full.txt" />
-    <Content Include="2015\Data\day7_full.txt" />
-    <Content Include="2015\Data\day6_full.txt" />
-    <Content Include="2015\Data\day5_full.txt" />
-    <Content Include="2015\Data\day3_full.txt" />
-    <Content Include="2015\Data\day2_full.txt" />
+    <Content Include="2015\Data\day19_full.txt" />
+    <Content Include="2015\Data\day18_full.txt" />
+    <Content Include="2015\Data\day17_full.txt" />
+    <Content Include="2015\Data\day16_full.txt" />
+    <Content Include="2015\Data\day15_full.txt" />
+    <Content Include="2015\Data\day14_full.txt" />
+    <Content Include="2015\Data\day13_full.txt" />
+    <Content Include="2015\Data\day09_full.txt" />
+    <Content Include="2015\Data\day08_full.txt" />
+    <Content Include="2015\Data\day07_full.txt" />
+    <Content Include="2015\Data\day06_full.txt" />
+    <Content Include="2015\Data\day05_full.txt" />
+    <Content Include="2015\Data\day03_full.txt" />
+    <Content Include="2015\Data\day02_full.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

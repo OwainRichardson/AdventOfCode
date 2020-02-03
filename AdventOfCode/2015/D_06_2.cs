@@ -17,7 +17,7 @@ namespace AdventOfCode._2015
         private static string Toggle = "toggle";
         public static void Execute()
         {
-            var instructions = File.ReadAllLines(@"C:\Work\Misc Projects\AdventOfCode\AdventOfCode\AdventOfCode\2015\Data\day6_full.txt");
+            var instructions = File.ReadAllLines(@"C:\Work\Misc Projects\AdventOfCode\AdventOfCode\AdventOfCode\2015\Data\day06_full.txt");
 
             foreach (var instruction in instructions)
             {

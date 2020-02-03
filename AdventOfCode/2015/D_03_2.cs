@@ -19,7 +19,7 @@ namespace AdventOfCode._2015
 
         public static void Execute()
         {
-            var input = File.ReadAllLines(@"C:\Work\Misc Projects\AdventOfCode\AdventOfCode\AdventOfCode\2015\Data\day3_full.txt")[0];
+            var input = File.ReadAllLines(@"C:\Work\Misc Projects\AdventOfCode\AdventOfCode\AdventOfCode\2015\Data\day03_full.txt")[0];
             coords.Add(new Coord { X = 0, Y = 0, Presents = 1 });
 
             for (int i = 0; i < input.Length; i += 2)

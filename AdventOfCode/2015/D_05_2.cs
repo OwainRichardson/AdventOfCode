@@ -16,7 +16,7 @@ namespace AdventOfCode._2015
 
         public static void Execute()
         {
-            var words = File.ReadAllLines(@"C:\Work\Misc Projects\AdventOfCode\AdventOfCode\AdventOfCode\2015\Data\day5_full.txt");
+            var words = File.ReadAllLines(@"C:\Work\Misc Projects\AdventOfCode\AdventOfCode\AdventOfCode\2015\Data\day05_full.txt");
 
             foreach (var word in words)
             {
