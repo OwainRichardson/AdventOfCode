@@ -69,6 +69,16 @@
     <Compile Include="2015\D_11_2.cs" />
     <Compile Include="2015\D_11_1.cs" />
     <Compile Include="2015\D_10_1.cs" />
+    <Compile Include="2015\D_25_1.cs" />
+    <Compile Include="2015\D_24_2.cs" />
+    <Compile Include="2015\D_24_1.cs" />
+    <Compile Include="2015\D_23_2.cs" />
+    <Compile Include="2015\D_23_Computer.cs" />
+    <Compile Include="2015\D_23_1.cs" />
+    <Compile Include="2015\D_21_2.cs" />
+    <Compile Include="2015\D_21_1.cs" />
+    <Compile Include="2015\D_20_2.cs" />
+    <Compile Include="2015\D_20_1.cs" />
     <Compile Include="2015\D_19_2.cs" />
     <Compile Include="2015\D_19_1.cs" />
     <Compile Include="2015\D_18_2.cs" />
@@ -83,17 +93,27 @@
     <Compile Include="2015\D_13_2.cs" />
     <Compile Include="2015\D_13_1.cs" />
     <Compile Include="2015\External\D_17_2.cs" />
+    <Compile Include="2015\Models\Armor.cs" />
     <Compile Include="2015\Models\Arrangement.cs" />
     <Compile Include="2015\Models\Coord.cs" />
+    <Compile Include="2015\Models\DiagonalCoord.cs" />
     <Compile Include="2015\Models\DinnerGuest.cs" />
+    <Compile Include="2015\Models\Fighter.cs" />
     <Compile Include="2015\Models\Ingredient.cs" />
     <Compile Include="2015\Models\IngredientScore.cs" />
+    <Compile Include="2015\Models\Instruction.cs" />
+    <Compile Include="2015\Models\Item.cs" />
     <Compile Include="2015\Models\JourneyDistance.cs" />
     <Compile Include="2015\Models\LightCoords.cs" />
+    <Compile Include="2015\Models\Pack.cs" />
+    <Compile Include="2015\Models\Register.cs" />
     <Compile Include="2015\Models\Reindeer.cs" />
     <Compile Include="2015\Models\Replacement.cs" />
+    <Compile Include="2015\Models\Result.cs" />
+    <Compile Include="2015\Models\Ring.cs" />
     <Compile Include="2015\Models\Route.cs" />
     <Compile Include="2015\Models\Score.cs" />
+    <Compile Include="2015\Models\Weapon.cs" />
     <Compile Include="2015\Models\Wire.cs" />
     <Compile Include="Common\CustomConsoleColour.cs" />
     <Compile Include="Program.cs" />
@@ -105,6 +125,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="2015\Data\day12_full.txt" />
+    <Content Include="2015\Data\day24_full.txt" />
+    <Content Include="2015\Data\day23_full.txt" />
+    <Content Include="2015\Data\day21_full.txt" />
     <Content Include="2015\Data\day19_full.txt" />
     <Content Include="2015\Data\day18_full.txt" />
     <Content Include="2015\Data\day17_full.txt" />
