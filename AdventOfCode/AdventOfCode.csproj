@@ -115,6 +115,8 @@
     <Compile Include="2015\Models\Score.cs" />
     <Compile Include="2015\Models\Weapon.cs" />
     <Compile Include="2015\Models\Wire.cs" />
+    <Compile Include="2016\D_03_2.cs" />
+    <Compile Include="2016\D_03_1.cs" />
     <Compile Include="2016\D_02_2.cs" />
     <Compile Include="2016\D_02_1.cs" />
     <Compile Include="2016\D_01_2.cs" />
@@ -147,6 +149,7 @@
     <Content Include="2015\Data\day05_full.txt" />
     <Content Include="2015\Data\day03_full.txt" />
     <Content Include="2015\Data\day02_full.txt" />
+    <Content Include="2016\Data\day03_full.txt" />
     <Content Include="2016\Data\day02_full.txt" />
     <Content Include="2016\Data\day01_full.txt" />
   </ItemGroup>

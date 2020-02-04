@@ -18,7 +18,7 @@ namespace AdventOfCode._2016
             int x = 0;
             int y = 2;
 
-            PrintKeypad(keypad);
+            //PrintKeypad(keypad);
 
             var inputs = File.ReadAllLines(@"C:\Work\Misc Projects\AdventOfCode\AdventOfCode\AdventOfCode\2016\Data\day02_full.txt");
             string answer = string.Empty;

@@ -19,10 +19,17 @@ namespace AdventOfCode
             Console.WriteLine("Day 1");
             _2016.D_01_1.Execute();
             _2016.D_01_2.Execute();
+            Console.WriteLine();
 
             Console.WriteLine("Day 2");
             _2016.D_02_1.Execute();
             _2016.D_02_2.Execute();
+            Console.WriteLine();
+
+            Console.WriteLine("Day 3");
+            _2016.D_03_1.Execute();
+            _2016.D_03_2.Execute();
+            Console.WriteLine();
         }
 
         public static void Run2015()
