@@ -61,9 +61,29 @@ namespace AdventOfCode
             //_2016.D_09_2.Execute();
             //Console.WriteLine();
 
-            Console.WriteLine("Day 10");
-            _2016.D_10_1.Execute();
-            _2016.D_10_2.Execute();
+            //Console.WriteLine("Day 10");
+            //_2016.D_10_1.Execute();
+            //_2016.D_10_2.Execute();
+            //Console.WriteLine();
+
+            //Console.WriteLine("Day 12");
+            //_2016.D_12_1.Execute();
+            //_2016.D_12_2.Execute();
+            //Console.WriteLine();
+
+            //Console.WriteLine("Day 14");
+            //_2016.D_14_1.Execute();
+            //_2016.D_14_2.Execute();
+            //Console.WriteLine();
+
+            //Console.WriteLine("Day 16");
+            //_2016.D_16_1.Execute();
+            //_2016.D_16_2.Execute();
+            //Console.WriteLine();
+
+            Console.WriteLine("Day 18");
+            _2016.D_18_1.Execute();
+            _2016.D_18_2.Execute();
             Console.WriteLine();
         }
 

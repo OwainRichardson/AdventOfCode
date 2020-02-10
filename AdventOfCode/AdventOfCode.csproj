@@ -115,6 +115,15 @@
     <Compile Include="2015\Models\Score.cs" />
     <Compile Include="2015\Models\Weapon.cs" />
     <Compile Include="2015\Models\Wire.cs" />
+    <Compile Include="2016\D_14_2.cs" />
+    <Compile Include="2016\D_14_1.cs" />
+    <Compile Include="2016\D_18_2.cs" />
+    <Compile Include="2016\D_18_1.cs" />
+    <Compile Include="2016\D_16_2.cs" />
+    <Compile Include="2016\D_16_1.cs" />
+    <Compile Include="2016\D_12_2.cs" />
+    <Compile Include="2016\D_12_Computer.cs" />
+    <Compile Include="2016\D_12_1.cs" />
     <Compile Include="2016\D_10_2.cs" />
     <Compile Include="2016\D_10_1.cs" />
     <Compile Include="2016\D_09_2_Recursive.cs" />
@@ -165,6 +174,7 @@
     <Content Include="2015\Data\day05_full.txt" />
     <Content Include="2015\Data\day03_full.txt" />
     <Content Include="2015\Data\day02_full.txt" />
+    <Content Include="2016\Data\day12_full.txt" />
     <Content Include="2016\Data\day10_full.txt" />
     <Content Include="2016\Data\day09_full.txt" />
     <Content Include="2016\Data\day08_full.txt" />
