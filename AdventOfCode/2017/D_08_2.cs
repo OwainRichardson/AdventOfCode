@@ -18,16 +18,16 @@ namespace AdventOfCode._2017
 
             registers = CreateRequiredRegisters(registers, inputs);
 
-            int total = RunInstructions(registers, inputs);
+            long total = RunInstructions(registers, inputs);
 
             Console.WriteLine(total);
         }
 
-        private static int RunInstructions(List<Register> registers, string[] inputs)
+        private static long RunInstructions(List<Register> registers, string[] inputs)
         {
             string pattern = string.Empty;
             Regex regex;
-            int maxRegValue = 0;
+            long maxRegValue = 0;
 
             foreach (string input in inputs)
             {
@@ -41,7 +41,7 @@ namespace AdventOfCode._2017
                     string registerToCheck = incMatch.Groups[3].Value;
                     string operation = incMatch.Groups[4].Value;
                     int valueToCheck = int.Parse(incMatch.Groups[5].Value);
-                    int registerValue = registers.First(x => x.Name == registerToCheck).Value;
+                    long registerValue = registers.First(x => x.Name == registerToCheck).Value;
 
                     if (CheckValue(operation, registerValue, valueToCheck))
                     {
@@ -59,7 +59,7 @@ namespace AdventOfCode._2017
                     string registerToCheck = incMatch.Groups[3].Value;
                     string operation = incMatch.Groups[4].Value;
                     int valueToCheck = int.Parse(incMatch.Groups[5].Value);
-                    int registerValue = registers.First(x => x.Name == registerToCheck).Value;
+                    long registerValue = registers.First(x => x.Name == registerToCheck).Value;
 
                     if (CheckValue(operation, registerValue, valueToCheck))
                     {
@@ -68,7 +68,7 @@ namespace AdventOfCode._2017
                     }
                 }
 
-                int maxReg = registers.Max(x => x.Value);
+                long maxReg = registers.Max(x => x.Value);
                 maxRegValue = maxReg > maxRegValue ? maxReg : maxRegValue;
             }
 
@@ -76,7 +76,7 @@ namespace AdventOfCode._2017
             return maxRegValue;
         }
 
-        private static bool CheckValue(string operation, int registerValue, int valueToCheck)
+        private static bool CheckValue(string operation, long registerValue, int valueToCheck)
         {
             if (operation == "<" && registerValue < valueToCheck)
             {

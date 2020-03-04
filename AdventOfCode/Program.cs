@@ -83,16 +83,31 @@ namespace AdventOfCode
             //_2017.D_13_2.Execute();
             //Console.WriteLine();
 
-            Console.WriteLine("Day 14");
+            //Console.WriteLine("Day 14");
             //_2017.D_14_1.Execute();
             //_2017.D_14_2_Incomplete.Execute();
-            _2017.D_14_2_External.Execute();
-            Console.WriteLine();
+            //_2017.D_14_2_External.Execute();
+            //Console.WriteLine();
 
             //Console.WriteLine("Day 15");
             //_2017.D_15_1.Execute();
             //_2017.D_15_2.Execute();
             //Console.WriteLine();
+
+            //Console.WriteLine("Day 16");
+            //_2017.D_16_1.Execute();
+            //_2017.D_16_2.Execute();
+            //Console.WriteLine();
+
+            //Console.WriteLine("Day 17");
+            //_2017.D_17_1.Execute();
+            //_2017.D_17_2.Execute();
+            //Console.WriteLine();
+
+            Console.WriteLine("Day 18");
+            _2017.D_18_1.Execute();
+            //_2017.D_18_2.Execute();
+            Console.WriteLine();
         }
 
         private static void Run2016()

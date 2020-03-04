@@ -40,7 +40,7 @@ namespace AdventOfCode._2017
                     string registerToCheck = incMatch.Groups[3].Value;
                     string operation = incMatch.Groups[4].Value;
                     int valueToCheck = int.Parse(incMatch.Groups[5].Value);
-                    int registerValue = registers.First(x => x.Name == registerToCheck).Value;
+                    long registerValue = registers.First(x => x.Name == registerToCheck).Value;
 
                     if (CheckValue(operation, registerValue, valueToCheck))
                     {
@@ -58,7 +58,7 @@ namespace AdventOfCode._2017
                     string registerToCheck = incMatch.Groups[3].Value;
                     string operation = incMatch.Groups[4].Value;
                     int valueToCheck = int.Parse(incMatch.Groups[5].Value);
-                    int registerValue = registers.First(x => x.Name == registerToCheck).Value;
+                    long registerValue = registers.First(x => x.Name == registerToCheck).Value;
 
                     if (CheckValue(operation, registerValue, valueToCheck))
                     {
@@ -71,7 +71,7 @@ namespace AdventOfCode._2017
             return registers;
         }
 
-        private static bool CheckValue(string operation, int registerValue, int valueToCheck)
+        private static bool CheckValue(string operation, long registerValue, int valueToCheck)
         {
             if (operation == "<" && registerValue < valueToCheck)
             {
