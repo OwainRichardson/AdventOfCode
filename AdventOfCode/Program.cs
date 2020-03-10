@@ -105,7 +105,7 @@ namespace AdventOfCode
             //Console.WriteLine();
 
             //Console.WriteLine("Day 18");
-            //_2017.D_18_1.Execute();
+            ////_2017.D_18_1.Execute();
             //_2017.D_18_2.Execute();
             //Console.WriteLine();
 
@@ -124,10 +124,25 @@ namespace AdventOfCode
             //_2017.D_20_2.Execute();
             //Console.WriteLine();
 
-            Console.WriteLine("Day 22");
-            _2017.D_22_1.Execute();
-            _2017.D_22_2.Execute();
+            //Console.WriteLine("Day 22");
+            //_2017.D_22_1.Execute();
+            //_2017.D_22_2.Execute();
+            //Console.WriteLine();
+
+            Console.WriteLine("Day 23");
+            _2017.D_23_1.Execute();
+            _2017.D_23_2.Execute();
             Console.WriteLine();
+
+            //Console.WriteLine("Day 24");
+            //_2017.D_24_1.Execute();
+            //_2017.D_24_2.Execute();
+            //Console.WriteLine();
+
+            //Console.WriteLine("Day 25");
+            //_2017.D_25_1.Execute();
+            ////_2017.D_25_2.Execute();
+            //Console.WriteLine();
         }
 
         private static void Run2016()

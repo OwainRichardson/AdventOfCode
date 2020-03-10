@@ -9,127 +9,64 @@ using System.Threading.Tasks;
 
 namespace AdventOfCode._2017
 {
-    public static class D_18_2
+    public static class D_23_1
     {
+        private static long _globalValue = 0;
+
         public static void Execute()
         {
-            string[] inputs = File.ReadAllLines(@"C:\Work\Misc Projects\AdventOfCode\AdventOfCode\AdventOfCode\2017\Data\day18_full.txt");
-
-            D_18_Computer programZero = new D_18_Computer(0, inputs);
-            D_18_Computer programOne = new D_18_Computer(1, inputs);
-
-            programZero.OtherQueue = programOne.Queue;
-            programOne.OtherQueue = programZero.Queue;
-
-            do
+            string[] inputs = File.ReadAllLines(@"C:\Work\Misc Projects\AdventOfCode\AdventOfCode\AdventOfCode\2017\Data\day23_full.txt");
+            List<Register> registers = new List<Register>
             {
-                programOne.Execute();
-                programZero.Execute();
-            }
-            while (programOne.Queue.Count != 0);
+                new Register { Name = "a", Value = 0},
+                new Register { Name = "b", Value = 0},
+                new Register { Name = "c", Value = 0},
+                new Register { Name = "d", Value = 0},
+                new Register { Name = "e", Value = 0},
+                new Register { Name = "f", Value = 0},
+                new Register { Name = "g", Value = 0},
+                new Register { Name = "h", Value = 0},
+            };
+            long index = 0;
+            int mulCount = 0;
 
-            Console.WriteLine($"Program 1 sent {programOne.SendCounter} values");
-        }
-    }
-
-    public class D_18_Computer
-    {
-        private int _registerPValue = 0;
-        private string[] _inputs = new string[0];
-        public int _computerId = -1;
-        public bool stopped = false;
-        public bool finished = false;
-        public bool Waiting { get; set; } = false;
-        long index = 0;
-        List<Register> registers = new List<Register>();
-        public Queue<long> Queue { get; }
-        public Queue<long> OtherQueue { get; set; }
-        public int SendCounter { get; set; }
-        public bool Finished { get; set; }
-
-        public D_18_Computer(int pValue, string[] inputs)
-        {
-            _registerPValue = pValue;
-            _inputs = inputs;
-            _computerId = pValue;
-
-            registers.Add(new Register
+            while (index < inputs.Length)
             {
-                Name = "p",
-                Value = pValue
-            });
 
-            Queue = new Queue<long>();
-        }
-
-        public void Execute()
-        {
-            while (true)
-            {
-                string input = _inputs[index];
-
-                if (input.StartsWith("set"))
+                if (inputs[index].StartsWith("set"))
                 {
-                    registers = SetRegister(registers, input);
+                    registers = SetRegister(registers, inputs[index]);
                     index++;
                 }
-                else if (input.StartsWith("add"))
+                else if (inputs[index].StartsWith("sub"))
                 {
-                    registers = AddRegister(registers, input);
+                    registers = SubRegister(registers, inputs[index]);
                     index++;
                 }
-                else if (input.StartsWith("mul"))
+                else if (inputs[index].StartsWith("mul"))
                 {
-                    registers = MulRegister(registers, input);
+                    registers = MulRegister(registers, inputs[index]);
+                    mulCount++;
                     index++;
                 }
-                else if (input.StartsWith("mod"))
+                else if (inputs[index].StartsWith("jnz"))
                 {
-                    registers = ModRegister(registers, input);
-                    index++;
-                }
-                else if (input.StartsWith("snd"))
-                {
-                    SndValue(registers, input);
-                    SendCounter++;
-                    index++;
-                }
-                else if (input.StartsWith("rcv"))
-                {
-                    if (RcvValue(ref registers, input))
-                    {
-                        index++;
-                    }
-                    else
-                    {
-                        return;
-                    }
-                }
-                else if (input.StartsWith("jgz"))
-                {
-                    JgzRegister(registers, input, ref index);
+                    JnzRegister(registers, inputs[index], ref index);
                 }
             }
+
+            Console.WriteLine(mulCount);
         }
 
-        private List<Register> ParseInput(List<Register> registers, string input, ref bool stopped, ref long index, out long? send)
+        private static void JnzRegister(List<Register> registers, string input, ref long index)
         {
-            send = null;
-
-
-
-            return registers;
-        }
-
-        private void JgzRegister(List<Register> registers, string input, ref long index)
-        {
-            string pattern = @"jgz (\w+) (.+)";
+            string pattern = @"jnz (\w+) (.+)";
             Regex regex = new Regex(pattern);
             Match match = regex.Match(input);
 
             long registerValue = GetValue(registers, match, 1);
 
-            if (registerValue > 0)
+            if (registerValue != 0)
             {
                 long jumpValue = GetValue(registers, match, 2);
 
@@ -141,49 +78,31 @@ namespace AdventOfCode._2017
             }
         }
 
-        private bool RcvValue(ref List<Register> registers, string input)
+        private static bool RcvValue()
         {
-            string pattern = @"rcv (\w+)";
-            Regex regex = new Regex(pattern);
-
-            Match match = regex.Match(input);
-            string registerName = match.Groups[1].Value;
-
-            Register register = registers.FirstOrDefault(x => x.Name == registerName);
-            if (register == null)
+            if (_globalValue != 0)
             {
-                register = new Register
-                {
-                    Name = registerName
-                };
-
-                registers.Add(register);
-            }
-
-            if (Queue.Count > 0)
-            {
-                register.Value = Queue.Dequeue();
-
+                Console.WriteLine(_globalValue);
                 return true;
             }
-            else
-            {
-                return false;
-            }
+
+            return false;
         }
 
-        private void SndValue(List<Register> registers, string input)
+        private static void SndValue(List<Register> registers, string input)
         {
             string pattern = @"snd (\w+)";
             Regex regex = new Regex(pattern);
             Match match = regex.Match(input);
 
-            OtherQueue.Enqueue(GetValue(registers, match, 1));
+            var value = GetValue(registers, match, 1);
+
+            _globalValue = value;
         }
 
-        private static List<Register> AddRegister(List<Register> registers, string input)
+        private static List<Register> SubRegister(List<Register> registers, string input)
         {
-            string pattern = @"add (\w+) (.+)";
+            string pattern = @"sub (\w+) (.+)";
             Regex regex = new Regex(pattern);
 
             Match match = regex.Match(input);
@@ -194,7 +113,7 @@ namespace AdventOfCode._2017
 
                 long value = GetValue(registers, match);
 
-                register.Value += value;
+                register.Value -= value;
             }
             else
             {
