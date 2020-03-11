@@ -155,6 +155,7 @@
     <Compile Include="2017\D_09_2.cs" />
     <Compile Include="2017\D_09_1.cs" />
     <Compile Include="2017\D_14_2_External.cs" />
+    <Compile Include="2017\D_21_1_External.cs" />
     <Compile Include="2017\D_23_2.cs" />
     <Compile Include="2017\D_23_1.cs" />
     <Compile Include="2017\D_25_1.cs" />
@@ -162,7 +163,7 @@
     <Compile Include="2017\D_24_1.cs" />
     <Compile Include="2017\D_22_2.cs" />
     <Compile Include="2017\D_22_1.cs" />
-    <Compile Include="2017\D_21_1_Incomplete.cs" />
+    <Compile Include="2017\D_21_1.cs" />
     <Compile Include="2017\D_20_2.cs" />
     <Compile Include="2017\D_20_1.cs" />
     <Compile Include="2017\D_19_2.cs" />
@@ -216,6 +217,11 @@
     <Compile Include="2017\Models\ScannerDirections.cs" />
     <Compile Include="2017\Models\State.cs" />
     <Compile Include="2017\Models\VirusCoord.cs" />
+    <Compile Include="2018\D_02_2.cs" />
+    <Compile Include="2018\D_02_1.cs" />
+    <Compile Include="2018\D_01_2.cs" />
+    <Compile Include="2018\D_01_1.cs" />
+    <Compile Include="2018\Models\CharFrequency.cs" />
     <Compile Include="Common\CustomConsoleColour.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -275,6 +281,9 @@
     <Content Include="2017\Data\day04_full.txt" />
     <Content Include="2017\Data\day02_full.txt" />
     <Content Include="2017\Data\day01_full.txt" />
+    <Content Include="2018\Data\day02_full.txt" />
+    <Content Include="2018\Data\day01_full.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
