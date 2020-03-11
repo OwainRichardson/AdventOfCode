@@ -44,8 +44,6 @@ namespace AdventOfCode._2018
 
                 if (charsTheSame + 1 == codeLength)
                 {
-                    //Console.WriteLine($"codes {code} and {codeToCheck} are only 1 char different");
-                    //Console.WriteLine();
                     foreach (var c in sameChars)
                     {
                         Console.Write($"{c}");
