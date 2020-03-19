@@ -11,9 +11,9 @@ namespace AdventOfCode
         static void Main(string[] args)
         {
             //Run2015();
-            //Run2016();
+            Run2016();
             //Run2017();
-            Run2018();
+            //Run2018();
         }
         private static void Run2018()
         {
@@ -22,10 +22,20 @@ namespace AdventOfCode
             //_2018.D_01_2.Execute();
             //Console.WriteLine();
 
-            Console.WriteLine("Day 2");
-            _2018.D_02_1.Execute();
-            _2018.D_02_2.Execute();
-            Console.WriteLine();
+            //Console.WriteLine("Day 2");
+            //_2018.D_02_1.Execute();
+            //_2018.D_02_2.Execute();
+            //Console.WriteLine();
+
+            //Console.WriteLine("Day 3");
+            //_2018.D_03_1.Execute();
+            //_2018.D_03_2.Execute();
+            //Console.WriteLine();
+
+            //Console.WriteLine("Day 5");
+            //_2018.D_05_1.Execute();
+            //_2018.D_05_2.Execute();
+            //Console.WriteLine();
         }
 
         private static void Run2017()
@@ -216,14 +226,29 @@ namespace AdventOfCode
             //_2016.D_12_2.Execute();
             //Console.WriteLine();
 
+            //Console.WriteLine("Day 13");
+            //_2016.D_13_1.Execute();
+            //_2016.D_13_2.Execute();
+            //Console.WriteLine();
+
             //Console.WriteLine("Day 14");
             //_2016.D_14_1.Execute();
             //_2016.D_14_2.Execute();
             //Console.WriteLine();
 
+            //Console.WriteLine("Day 15");
+            //_2016.D_15_1.Execute();
+            //_2016.D_15_2.Execute();
+            //Console.WriteLine();
+
             //Console.WriteLine("Day 16");
             //_2016.D_16_1.Execute();
             //_2016.D_16_2.Execute();
+            //Console.WriteLine();
+
+            //Console.WriteLine("Day 17");
+            //_2016.D_17_1.Execute();
+            //_2016.D_17_2.Execute();
             //Console.WriteLine();
 
             //Console.WriteLine("Day 18");
@@ -236,9 +261,14 @@ namespace AdventOfCode
             //_2016.D_19_2.Execute();
             //Console.WriteLine();
 
-            Console.WriteLine("Day 20");
-            _2016.D_20_1.Execute();
-            _2016.D_20_2.Execute();
+            //Console.WriteLine("Day 20");
+            //_2016.D_20_1.Execute();
+            //_2016.D_20_2.Execute();
+            //Console.WriteLine();
+
+            Console.WriteLine("Day 21");
+            _2016.D_21_1.Execute();
+            _2016.D_21_2.Execute();
             Console.WriteLine();
         }
 
