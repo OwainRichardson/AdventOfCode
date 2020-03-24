@@ -123,6 +123,9 @@
     <Compile Include="2016\D_14_1.cs" />
     <Compile Include="2016\D_17_2.cs" />
     <Compile Include="2016\D_17_1.cs" />
+    <Compile Include="2016\D_19_2_External.cs" />
+    <Compile Include="2016\D_24_1.cs" />
+    <Compile Include="2016\D_22_1.cs" />
     <Compile Include="2016\D_21_2_Scrambler.cs" />
     <Compile Include="2016\D_21_2.cs" />
     <Compile Include="2016\D_21_1_Scrambler.cs" />
@@ -161,8 +164,10 @@
     <Compile Include="2016\Models\BlockedIp.cs" />
     <Compile Include="2016\Models\Bot.cs" />
     <Compile Include="2016\Models\CharacterCount.cs" />
+    <Compile Include="2016\Models\MapCoord.cs" />
     <Compile Include="2016\Models\Direction.cs" />
     <Compile Include="2016\Models\Disc.cs" />
+    <Compile Include="2016\Models\Node.cs" />
     <Compile Include="2017\D_09_2.cs" />
     <Compile Include="2017\D_09_1.cs" />
     <Compile Include="2017\D_14_2_External.cs" />
@@ -238,6 +243,20 @@
     <Compile Include="2018\D_01_1.cs" />
     <Compile Include="2018\Models\CharFrequency.cs" />
     <Compile Include="2018\Models\Claim.cs" />
+    <Compile Include="2019\D_06_2.cs" />
+    <Compile Include="2019\D_06_1.cs" />
+    <Compile Include="2019\D_05_2.cs" />
+    <Compile Include="2019\D_05_1.cs" />
+    <Compile Include="2019\D_04_2.cs" />
+    <Compile Include="2019\D_04_1.cs" />
+    <Compile Include="2019\D_03_2.cs" />
+    <Compile Include="2019\D_03_1.cs" />
+    <Compile Include="2019\D_02_2.cs" />
+    <Compile Include="2019\D_02_1.cs" />
+    <Compile Include="2019\D_01_2.cs" />
+    <Compile Include="2019\D_01_1.cs" />
+    <Compile Include="2019\Models\Coord.cs" />
+    <Compile Include="2019\Models\Orbit.cs" />
     <Compile Include="Common\CustomConsoleColour.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -266,6 +285,8 @@
     <Content Include="2015\Data\day03_full.txt" />
     <Content Include="2015\Data\day02_full.txt" />
     <Content Include="2016\Data\day15_full.txt" />
+    <Content Include="2016\Data\day24_full.txt" />
+    <Content Include="2016\Data\day22_full.txt" />
     <Content Include="2016\Data\day21_full.txt" />
     <Content Include="2016\Data\day20_full.txt" />
     <Content Include="2016\Data\day12_full.txt" />
@@ -303,6 +324,9 @@
     <Content Include="2018\Data\day03_full.txt" />
     <Content Include="2018\Data\day02_full.txt" />
     <Content Include="2018\Data\day01_full.txt" />
+    <Content Include="2019\Data\day06_full.txt" />
+    <Content Include="2019\Data\day02_full.txt" />
+    <Content Include="2019\Data\day01_full.txt" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

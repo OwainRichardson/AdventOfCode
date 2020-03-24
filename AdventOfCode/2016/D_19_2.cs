@@ -17,42 +17,45 @@ namespace AdventOfCode._2016
         public static void Execute()
         {
             int numberOfElves = 3014603;
-            LinkedList<int> elves = new LinkedList<int>();
+            int[] elves = new int[numberOfElves];
 
             SetupElves(ref elves, numberOfElves);
 
             PlayGame(elves);
         }
 
-        private static void PlayGame(LinkedList<int> elves)
+        private static void PlayGame(int[] elves)
         {
             int index = 0;
 
-            while (elves.Count > 1)
+            while (elves.Length > 1)
             {
-                int numberOfElves = elves.Count;
+                Console.Write($"\r{elves.Length}");
 
-                var node = elves.First;
+                var nodeToRemove = CalculateNodeToRemove(elves, index % elves.Length);
 
-                while (node != null)
+                elves = elves.RemoveAt(nodeToRemove);
+
+                if (nodeToRemove > index)
                 {
-                    var nextNode = node.Next;
-
-                    index = GetIndexOfNode(node.Value, elves);
-
-                    var nodeToRemove = CalculateNodeToRemove(elves, index);
-                    elves.Remove(nodeToRemove);
-
-                    if (elves.Count == 1)
-                    {
-                        break;
-                    }
-
-                    node = nextNode;
+                    index++;
                 }
             }
 
-            Console.WriteLine($"Elf with all the presents: {elves.Single()}");
+            Console.Write($"\rElf with all the presents: {elves.Single()}");
+            Console.WriteLine();
+        }
+
+        public static T[] RemoveAt<T>(this T[] source, int index)
+        {
+            T[] dest = new T[source.Length - 1];
+            if (index > 0)
+                Array.Copy(source, 0, dest, 0, index);
+
+            if (index < source.Length - 1)
+                Array.Copy(source, index + 1, dest, index, source.Length - index - 1);
+
+            return dest;
         }
 
         private static int GetIndexOfNode(int value, LinkedList<int> elves)
@@ -72,27 +75,27 @@ namespace AdventOfCode._2016
             return index;
         }
 
-        private static int CalculateNodeToRemove(LinkedList<int> elves, int index)
+        private static int CalculateNodeToRemove(int[] elves, int index)
         {
             int indexToRemove = -1;
 
-            if (elves.Count % 2 == 0)
+            if (elves.Length % 2 == 0)
             {
-                indexToRemove = ((elves.Count / 2) + index) % elves.Count;
+                indexToRemove = ((elves.Length/ 2) + index) % elves.Length;
             }
             else
             {
-                 indexToRemove = ((elves.Count / 2) + index) % elves.Count;
+                indexToRemove = ((elves.Length / 2) + index) % elves.Length;
             }
 
-            return elves.ElementAt(indexToRemove);
+            return indexToRemove;
         }
 
-        private static void SetupElves(ref LinkedList<int> elves, int numberOfElves)
+        private static void SetupElves(ref int[] elves, int numberOfElves)
         {
-            for (int e = 1; e <= numberOfElves; e++)
+            for (int e = 0; e < numberOfElves; e++)
             {
-                elves.AddLast(e);
+                elves[e] = e + 1;
             }
         }
     }

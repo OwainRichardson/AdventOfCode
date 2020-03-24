@@ -11,10 +11,45 @@ namespace AdventOfCode
         static void Main(string[] args)
         {
             //Run2015();
-            Run2016();
+            //Run2016();
             //Run2017();
             //Run2018();
+            Run2019();
         }
+
+        private static void Run2019()
+        {
+            Console.WriteLine("Day 1");
+            _2019.D_01_1.Execute();
+            _2019.D_01_2.Execute();
+            Console.WriteLine();
+
+            Console.WriteLine("Day 2");
+            _2019.D_02_1.Execute();
+            _2019.D_02_2.Execute();
+            Console.WriteLine();
+
+            //Console.WriteLine("Day 3");
+            //_2019.D_03_1.Execute();
+            //_2019.D_03_2.Execute();
+            //Console.WriteLine();
+
+            Console.WriteLine("Day 4");
+            _2019.D_04_1.Execute();
+            _2019.D_04_2.Execute();
+            Console.WriteLine();
+
+            Console.WriteLine("Day 5");
+            _2019.D_05_1.Execute();
+            _2019.D_05_2.Execute();
+            Console.WriteLine();
+
+            Console.WriteLine("Day 6");
+            _2019.D_06_1.Execute();
+            _2019.D_06_2.Execute();
+            Console.WriteLine();
+        }
+
         private static void Run2018()
         {
             //Console.WriteLine("Day 1");
@@ -258,7 +293,7 @@ namespace AdventOfCode
 
             //Console.WriteLine("Day 19");
             //_2016.D_19_1.Execute();
-            //_2016.D_19_2.Execute();
+            //_2016.D_19_2_External.Execute();
             //Console.WriteLine();
 
             //Console.WriteLine("Day 20");
@@ -266,9 +301,19 @@ namespace AdventOfCode
             //_2016.D_20_2.Execute();
             //Console.WriteLine();
 
-            Console.WriteLine("Day 21");
-            _2016.D_21_1.Execute();
-            _2016.D_21_2.Execute();
+            //Console.WriteLine("Day 21");
+            //_2016.D_21_1.Execute();
+            //_2016.D_21_2.Execute();
+            //Console.WriteLine();
+
+            //Console.WriteLine("Day 22");
+            //_2016.D_22_1.Execute();
+            //_2016.D_22_2_External.Execute();
+            //Console.WriteLine();
+
+            Console.WriteLine("Day 24");
+            _2016.D_24_1.Execute();
+            //_2016.D_24_2.Execute();
             Console.WriteLine();
         }
 
