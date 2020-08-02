@@ -13,7 +13,7 @@ namespace AdventOfCode._2018
     {
         public static void Execute()
         {
-            var input = File.ReadAllLines(@"C:\Work\Misc Projects\AdventOfCode\AdventOfCode\AdventOfCode\2018\Data\day05_full.txt")[0];
+            var input = File.ReadAllLines(@"../../../AdventOfCode/2018/Data/day05_full.txt")[0];
 
             List<string> distinctLetters = input.ToLower().Select(x => x.ToString()).Distinct().ToList();
             Dictionary<string, int> possibles = new Dictionary<string, int>();

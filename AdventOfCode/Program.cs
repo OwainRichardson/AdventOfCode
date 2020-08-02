@@ -13,8 +13,8 @@ namespace AdventOfCode
             //Run2015();
             //Run2016();
             //Run2017();
-            //Run2018();
-            Run2019();
+            Run2018();
+            //Run2019();
         }
 
         private static void Run2019()
@@ -103,15 +103,15 @@ namespace AdventOfCode
             //_2018.D_02_2.Execute();
             //Console.WriteLine();
 
-            //Console.WriteLine("Day 3");
-            //_2018.D_03_1.Execute();
-            //_2018.D_03_2.Execute();
-            //Console.WriteLine();
+            Console.WriteLine("day 3");
+            _2018.D_03_1.Execute();
+            _2018.D_03_2.Execute();
+            Console.WriteLine();
 
-            //Console.WriteLine("Day 5");
-            //_2018.D_05_1.Execute();
-            //_2018.D_05_2.Execute();
-            //Console.WriteLine();
+            Console.WriteLine("Day 5");
+            _2018.D_05_1.Execute();
+            _2018.D_05_2.Execute();
+            Console.WriteLine();
         }
 
         private static void Run2017()

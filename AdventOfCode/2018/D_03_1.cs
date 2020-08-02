@@ -13,7 +13,7 @@ namespace AdventOfCode._2018
     {
         public static void Execute()
         {
-            var inputs = File.ReadAllLines(@"C:\Work\Misc Projects\AdventOfCode\AdventOfCode\AdventOfCode\2018\Data\day03_full.txt");
+            var inputs = File.ReadAllLines(@"../../../AdventOfCode/2018/Data/day03_full.txt");
 
             List<Claim> claims = ParseInputs(inputs);
 
