@@ -354,6 +354,9 @@
     <Content Include="2019\Data\day02_full.txt" />
     <Content Include="2019\Data\day01_full.txt" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="2020\Data\" />
+    <Folder Include="2020\Models\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
