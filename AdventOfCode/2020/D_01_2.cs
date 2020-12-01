@@ -8,7 +8,7 @@ namespace AdventOfCode._2020
     {
         public static void Execute()
         {
-            int[] inputs = File.ReadAllLines(@"2020\Data\day01_full.txt").Select(x => int.Parse(x)).ToArray();
+            int[] inputs = File.ReadAllLines(@"2020\Data\day01.txt").Select(x => int.Parse(x)).ToArray();
             int total = 2020;
             bool found = false;
 
