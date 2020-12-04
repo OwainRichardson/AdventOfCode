@@ -34,6 +34,11 @@ namespace AdventOfCode
             _2020.D_03_1.Execute();
             _2020.D_03_2.Execute();
             Console.WriteLine();
+
+            Console.WriteLine("Day 4");
+            _2020.D_04_1.Execute();
+            _2020.D_04_2.Execute();
+            Console.WriteLine();
         }
 
         private static void Run2019()
