@@ -281,6 +281,8 @@
     <Compile Include="2019\Models\Orbit.cs" />
     <Compile Include="2019\Models\RobotCoord.cs" />
     <Compile Include="2019\Models\Vector.cs" />
+    <Compile Include="2020\D_08_2.cs" />
+    <Compile Include="2020\D_08_1.cs" />
     <Compile Include="2020\D_07_2.cs" />
     <Compile Include="2020\D_07_1.cs" />
     <Compile Include="2020\D_06_2.cs" />
@@ -296,6 +298,7 @@
     <Compile Include="2020\D_01_2.cs" />
     <Compile Include="2020\D_01_1.cs" />
     <Compile Include="2020\Models\Bag.cs" />
+    <Compile Include="2020\Models\Instruction.cs" />
     <Compile Include="2020\Models\Passport.cs" />
     <Compile Include="2020\Models\SledgeDirection.cs" />
     <Compile Include="Common\CustomConsoleColour.cs" />
@@ -372,6 +375,9 @@
     <Content Include="2019\Data\day06_full.txt" />
     <Content Include="2019\Data\day02_full.txt" />
     <Content Include="2019\Data\day01_full.txt" />
+    <Content Include="2020\Data\day08.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="2020\Data\day07.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
