@@ -349,7 +349,7 @@ namespace AdventOfCode._2019
                                 throw new Exception("Something broke");
                             }
                         }
-                        catch (IndexOutOfRangeException e)
+                        catch
                         {
                             res[i] = 0;
                         }
@@ -397,7 +397,7 @@ namespace AdventOfCode._2019
                                 res[i] = WorkingProgram[(int)immediate + RelativeBase];
                             }
                         }
-                        catch (IndexOutOfRangeException e)
+                        catch
                         {
                             res[i] = 0;
                         }

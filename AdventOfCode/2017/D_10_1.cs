@@ -29,7 +29,6 @@ namespace AdventOfCode._2017
         {
             int index = 0;
             int skipSize = 0;
-            int loop = 1;
 
             foreach (var length in cycle)
             {

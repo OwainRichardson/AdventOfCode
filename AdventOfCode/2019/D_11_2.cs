@@ -23,7 +23,6 @@ namespace AdventOfCode._2019
             long colour = 0;
             long direction = 0;
             int currentDirection = Direction.Up;
-            int i = 1;
             while (input[executionPointer] != OpcodeActions.End)
             {
                 RobotCoord currentCoord = coordsVisited.First(x => x.Current);

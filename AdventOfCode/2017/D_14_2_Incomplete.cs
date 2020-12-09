@@ -30,8 +30,6 @@ namespace AdventOfCode._2017
             }
 
             NumberGroups(map);
-
-            var owain = 4;
         }
 
         private static void NumberGroups(string[,] map)

@@ -38,8 +38,6 @@ namespace AdventOfCode._2018
         {
             foreach (Claim claim in claims)
             {
-                bool overlaps = false;
-
                 for (int y = claim.Y; y < claim.Y + claim.Height; y++)
                 {
                     for (int x = claim.X; x < claim.X + claim.Width; x++)

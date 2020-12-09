@@ -15,8 +15,6 @@ namespace AdventOfCode._2020
         public static void Execute()
         {
             string[] inputs = File.ReadAllLines(@"2020\Data\day03.txt");
-            int x = 0;
-            int y = 0;
             int width = inputs[0].Length;
             int height = inputs.Count();
 

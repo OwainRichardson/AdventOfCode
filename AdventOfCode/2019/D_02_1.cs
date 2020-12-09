@@ -40,7 +40,7 @@ namespace AdventOfCode._2019
 
                     indexOfOpcode += 4;
                 }
-                catch (IndexOutOfRangeException ex)
+                catch
                 {
                     break;
                 }
