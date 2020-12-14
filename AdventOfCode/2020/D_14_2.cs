@@ -51,7 +51,7 @@ namespace AdventOfCode._2020
                 total += entry.Value;
             }
 
-            Console.WriteLine(total);
+            Console.WriteLine($"\r{total}");
         }
 
         private static List<long> GetIndexes(int initialIndex)
