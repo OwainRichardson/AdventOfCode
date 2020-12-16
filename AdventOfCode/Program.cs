@@ -92,7 +92,14 @@ namespace AdventOfCode
 
             Console.WriteLine("Day 15");
             _2020.D_15_1.Execute();
-            _2020.D_15_2.Execute();
+            //_2020.D_15_2.Execute();
+            Console.WriteLine();
+
+
+
+            Console.WriteLine("Day 16");
+            _2020.D_16_1.Execute();
+            _2020.D_16_2.Execute();
             Console.WriteLine();
         }
 

@@ -27,5 +27,17 @@ namespace AdventOfCode.Common
                 dictionary.Add(index, value);
             }
         }
+
+        public static void AddOrUpdateTickets(this Dictionary<int, List<string>> dictionary, int index, string ticketField)
+        {
+            if (dictionary.ContainsKey(index))
+            {
+                dictionary[index].Add(ticketField);
+            }
+            else
+            {
+                dictionary[index] = new List<string> { ticketField };
+            }
+        }
     }
 }
