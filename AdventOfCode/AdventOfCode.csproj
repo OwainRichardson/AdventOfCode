@@ -282,6 +282,8 @@
     <Compile Include="2019\Models\RobotCoord.cs" />
     <Compile Include="2019\Models\Vector.cs" />
     <Compile Include="2020\Directions.cs" />
+    <Compile Include="2020\D_18_2.cs" />
+    <Compile Include="2020\D_18_1.cs" />
     <Compile Include="2020\D_17_2.cs" />
     <Compile Include="2020\D_17_1.cs" />
     <Compile Include="2020\D_16_2.cs" />
@@ -400,6 +402,9 @@
     <Content Include="2019\Data\day06_full.txt" />
     <Content Include="2019\Data\day02_full.txt" />
     <Content Include="2019\Data\day01_full.txt" />
+    <Content Include="2020\Data\day18.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="2020\Data\day17.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
