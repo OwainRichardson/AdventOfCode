@@ -13,5 +13,18 @@
 
             return -999;
         }
+
+        public static bool ContainsANumber(this string input)
+        {
+            foreach (char c in input)
+            {
+                if (char.IsDigit(c))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
     }
 }

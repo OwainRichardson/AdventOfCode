@@ -38,6 +38,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -281,7 +283,11 @@
     <Compile Include="2019\Models\Orbit.cs" />
     <Compile Include="2019\Models\RobotCoord.cs" />
     <Compile Include="2019\Models\Vector.cs" />
-    <Compile Include="2020\Directions.cs" />
+    <Compile Include="2020\D_22_2.cs" />
+    <Compile Include="2020\D_22_1.cs" />
+    <Compile Include="2020\D_19_1.cs" />
+    <Compile Include="2020\D_19_1_External.cs" />
+    <Compile Include="2020\Models\Directions.cs" />
     <Compile Include="2020\D_18_2.cs" />
     <Compile Include="2020\D_18_1.cs" />
     <Compile Include="2020\D_17_2.cs" />
@@ -324,6 +330,7 @@
     <Compile Include="2020\Models\Dimension.cs" />
     <Compile Include="2020\Models\Instruction.cs" />
     <Compile Include="2020\Models\Passport.cs" />
+    <Compile Include="2020\Models\Rule.cs" />
     <Compile Include="2020\Models\SledgeDirection.cs" />
     <Compile Include="2020\Models\Ticket.cs" />
     <Compile Include="2020\Models\TicketField.cs" />
@@ -402,6 +409,12 @@
     <Content Include="2019\Data\day06_full.txt" />
     <Content Include="2019\Data\day02_full.txt" />
     <Content Include="2019\Data\day01_full.txt" />
+    <Content Include="2020\Data\day22.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="2020\Data\day19.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="2020\Data\day18.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

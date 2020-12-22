@@ -105,9 +105,21 @@ namespace AdventOfCode
             //_2020.D_17_2.Execute();
             //Console.WriteLine();
 
-            Console.WriteLine("Day 18");
+            //Console.WriteLine("Day 18");
             //_2020.D_18_1.Execute();
-            _2020.D_18_2.Execute();
+            //_2020.D_18_2.Execute();
+            //Console.WriteLine();
+
+            //Console.WriteLine("Day 19");
+            //_2020.D_19_1_External.Execute();
+            //_2020.D_19_1_External.PartTwo();
+            //_2020.D_19_1.Execute();
+            //_2020.D_19_2.Execute();
+            //Console.WriteLine();
+
+            Console.WriteLine("Day 22");
+            //_2020.D_22_1.Execute();
+            _2020.D_22_2.Execute();
             Console.WriteLine();
         }
 
