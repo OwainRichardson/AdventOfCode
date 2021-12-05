@@ -334,6 +334,8 @@
     <Compile Include="2020\Models\SledgeDirection.cs" />
     <Compile Include="2020\Models\Ticket.cs" />
     <Compile Include="2020\Models\TicketField.cs" />
+    <Compile Include="2021\D_05_2.cs" />
+    <Compile Include="2021\D_05_1.cs" />
     <Compile Include="2021\D_04_2.cs" />
     <Compile Include="2021\D_04_1.cs" />
     <Compile Include="2021\D_03_2.cs" />
@@ -342,8 +344,10 @@
     <Compile Include="2021\D_02_1.cs" />
     <Compile Include="2021\D_01_2.cs" />
     <Compile Include="2021\D_01_1.cs" />
+    <Compile Include="2021\Extensions\DictionaryExtensions.cs" />
     <Compile Include="2021\Models\Board.cs" />
     <Compile Include="2021\Models\BoardCoord.cs" />
+    <Compile Include="2021\Models\LineCoords.cs" />
     <Compile Include="Common\CustomConsoleColour.cs" />
     <Compile Include="Common\ListExtensions.cs" />
     <Compile Include="Common\DictionaryExtensions.cs" />
@@ -477,6 +481,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="2020\Data\day01.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="2021\Data\day05.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="2021\Data\day04.txt">
