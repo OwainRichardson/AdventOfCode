@@ -41,10 +41,14 @@ namespace AdventOfCode
             _2021.D_04_2.Execute();
             Console.WriteLine();
 
-
             Console.WriteLine("Day 5");
             _2021.D_05_1.Execute();
             _2021.D_05_2.Execute();
+            Console.WriteLine();
+
+            Console.WriteLine("Day 6");
+            _2021.D_06_1.Execute();
+            _2021.D_06_2.Execute();
             Console.WriteLine();
         }
 
