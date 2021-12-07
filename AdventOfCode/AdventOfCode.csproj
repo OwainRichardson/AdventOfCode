@@ -334,6 +334,8 @@
     <Compile Include="2020\Models\SledgeDirection.cs" />
     <Compile Include="2020\Models\Ticket.cs" />
     <Compile Include="2020\Models\TicketField.cs" />
+    <Compile Include="2021\D_07_2.cs" />
+    <Compile Include="2021\D_07_1.cs" />
     <Compile Include="2021\D_06_2.cs" />
     <Compile Include="2021\D_06_1.cs" />
     <Compile Include="2021\D_05_2.cs" />
@@ -483,6 +485,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="2020\Data\day01.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="2021\Data\day07.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="2021\Data\day06.txt">
