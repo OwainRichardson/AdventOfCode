@@ -70,6 +70,16 @@ namespace AdventOfCode
             _2021.D_10_1.Execute();
             _2021.D_10_2.Execute();
             Console.WriteLine();
+
+            Console.WriteLine("Day 11");
+            _2021.D_11_1.Execute();
+            _2021.D_11_2.Execute();
+            Console.WriteLine();
+
+            Console.WriteLine("Day 12");
+            _2021.D_12_1.Execute();
+            _2021.D_12_2.Execute();
+            Console.WriteLine();
         }
 
         private static void Run2020()
