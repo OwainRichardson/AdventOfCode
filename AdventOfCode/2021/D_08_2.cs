@@ -13,7 +13,6 @@ namespace AdventOfCode._2021
         public static void Execute()
         {
             string[] inputs = File.ReadAllLines(@"2021\Data\day08.txt");
-            int chosenNumbers = 0;
             int runningTotal = 0;
 
             foreach (string input in inputs)

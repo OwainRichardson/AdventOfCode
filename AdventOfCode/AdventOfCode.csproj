@@ -334,6 +334,10 @@
     <Compile Include="2020\Models\SledgeDirection.cs" />
     <Compile Include="2020\Models\Ticket.cs" />
     <Compile Include="2020\Models\TicketField.cs" />
+    <Compile Include="2021\D_14_2.cs" />
+    <Compile Include="2021\D_14_1.cs" />
+    <Compile Include="2021\D_13_2.cs" />
+    <Compile Include="2021\D_13_1.cs" />
     <Compile Include="2021\D_12_2.cs" />
     <Compile Include="2021\D_12_1.cs" />
     <Compile Include="2021\D_11_2.cs" />
@@ -362,10 +366,12 @@
     <Compile Include="2021\Extensions\ListExtensions.cs" />
     <Compile Include="2021\Models\Board.cs" />
     <Compile Include="2021\Models\Cave.cs" />
+    <Compile Include="2021\Models\FoldInstruction.cs" />
     <Compile Include="2021\Models\HeightMapCoord.cs" />
     <Compile Include="2021\Models\BoardCoord.cs" />
     <Compile Include="2021\Models\LineCoords.cs" />
     <Compile Include="2021\Models\Octopus.cs" />
+    <Compile Include="2021\Models\PolyRule.cs" />
     <Compile Include="Common\CustomConsoleColour.cs" />
     <Compile Include="Common\ListExtensions.cs" />
     <Compile Include="Common\DictionaryExtensions.cs" />
@@ -499,6 +505,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="2020\Data\day01.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="2021\Data\day14.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="2021\Data\day13.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="2021\Data\day12.txt">

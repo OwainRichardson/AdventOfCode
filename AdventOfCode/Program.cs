@@ -77,8 +77,18 @@ namespace AdventOfCode
             Console.WriteLine();
 
             Console.WriteLine("Day 12");
-            _2021.D_12_1.Execute();
-            _2021.D_12_2.Execute();
+            //_2021.D_12_1.Execute();
+            //_2021.D_12_2.Execute();
+            Console.WriteLine();
+
+            Console.WriteLine("Day 13");
+            _2021.D_13_1.Execute();
+            _2021.D_13_2.Execute();
+            Console.WriteLine();
+
+            Console.WriteLine("Day 14");
+            _2021.D_14_1.Execute();
+            _2021.D_14_2.Execute();
             Console.WriteLine();
         }
 
@@ -411,7 +421,6 @@ namespace AdventOfCode
 
             //Console.WriteLine("Day 25");
             //_2017.D_25_1.Execute();
-            ////_2017.D_25_2.Execute();
             //Console.WriteLine();
         }
 
