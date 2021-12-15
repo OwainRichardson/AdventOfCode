@@ -22,52 +22,49 @@ namespace AdventOfCode._2021
             var joinedList = string.Join("", rules.Keys).Distinct().Select(x => x.ToString()).ToList();
             _combined = joinedList.ToDictionary(x => x, x => (long)0);
 
-            List<string> pairs = CompilePairs(template);
-            int pairIndex = 1;
-            foreach (string pair in pairs)
-            {
-                Console.Write($"\r{pairIndex}/{pairs.Count}          ");
+            Dictionary<string, long> pairs = CompilePairs(template);
 
-                Step(pair, rules);
-                
-                pairIndex++;
+            for (int cycle = 1; cycle <= _cycles; cycle++)
+            {
+                pairs = Step(pairs, rules);
+            }
+
+            foreach (var pair in pairs)
+            {
+                _combined[pair.Key[0].ToString()] += pair.Value;
             }
 
             _combined[template.Last().ToString()] += 1;
 
-            foreach(var combine in _combined)
-            {
-                Console.WriteLine($"\r {combine.Key} - {combine.Value}");
-            }
-
-            Console.WriteLine($"\r{_combined.Max(x => x.Value) - _combined.Min(x => x.Value)}                                       ");
+            Console.WriteLine(_combined.Values.Max() - _combined.Values.Min());
         }
 
-        private static List<string> CompilePairs(string template)
+        private static Dictionary<string, long> Step(Dictionary<string, long> pairs, Dictionary<string, string> rules)
         {
-            List<string> pairs = new List<string>();
+            Dictionary<string, long> newPairs = rules.Keys.ToDictionary(x => x, x => (long)0);
+
+            foreach (var pair in pairs)
+            {
+                string[] split = new string[] { rules[pair.Key], $"{rules[pair.Key][1]}{pair.Key[1]}" };
+
+                foreach (string key in split)
+                {
+                    newPairs[key] += pair.Value;
+                }
+            }
+
+            return newPairs;
+        }
+
+        private static Dictionary<string, long> CompilePairs(string template)
+        {
+            Dictionary<string, long> pairs = new Dictionary<string, long>();
             for (int i = 0; i < template.Length - 1; i++)
             {
-                pairs.Add(template.Substring(i, 2));
+                pairs.Add(template.Substring(i, 2), 1);
             }
 
             return pairs;
-        }
-
-        private static void Step(string template, Dictionary<string, string> rules, int cycles = 1)
-        {
-            if (cycles > _cycles)
-            {
-                _combined[template[0].ToString()] += 1;
-                return;
-            }
-
-            template = $"{rules[template]}{template.Last()}";
-
-            for (int index = 0; index < template.Length - 1; index++)
-            {
-                Step(template.Substring(index, 2), rules, cycles + 1);
-            }
         }
 
         private static List<string> SplitTemplate(string template)
