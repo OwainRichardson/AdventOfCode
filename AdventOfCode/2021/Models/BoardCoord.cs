@@ -6,5 +6,6 @@
         public int Y { get; set; }
         public int Value { get; set; }
         public bool Called { get; set; }
+        public int LowestRisk { get; set; }
     }
 }
