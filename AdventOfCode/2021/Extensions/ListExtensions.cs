@@ -15,5 +15,17 @@ namespace AdventOfCode._2021.Extensions
 
             return product;
         }
+
+        public static long Product(this IEnumerable<long> list)
+        {
+            long product = 1;
+
+            foreach (var item in list)
+            {
+                product *= item;
+            }
+
+            return product;
+        }
     }
 }
