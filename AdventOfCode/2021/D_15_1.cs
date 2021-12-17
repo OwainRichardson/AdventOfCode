@@ -21,7 +21,50 @@ namespace AdventOfCode._2021
 
             FindPaths(map);
 
+            bool changes = true;
+            while (changes)
+            {
+                changes = CheckMap(map);
+            }
+
             Console.WriteLine(map.Last().Value.Item2);
+        }
+
+        private static bool CheckMap(Dictionary<string, Tuple<int, int>> map)
+        {
+            bool changes = false;
+
+            for (int y = 0; y <= _maxY; y++)
+            {
+                for (int x = 0; x <= _maxX; x++)
+                {
+                    string currentCoordKey = $"{x},{y}";
+                    var currentCoord = map[currentCoordKey];
+
+                    string upCoordKey = $"{x},{y - 1}";
+                    int upCoordRisk = map.ContainsKey(upCoordKey) ? map[upCoordKey]?.Item2 ?? 999999999 : 999999999;
+                    string leftCoordKey = $"{x - 1},{y}";
+                    int leftCoordRisk = map.ContainsKey(leftCoordKey) ? map[leftCoordKey]?.Item2 ?? 999999999 : 999999999;
+                    string downCoordKey = $"{x},{y + 1}";
+                    int downCoordRisk = map.ContainsKey(downCoordKey) ? map[downCoordKey]?.Item2 ?? 999999999 : 999999999;
+                    string rightCoordKey = $"{x + 1},{y}";
+                    int rightCoordRisk = map.ContainsKey(rightCoordKey) ? map[rightCoordKey]?.Item2 ?? 999999999 : 999999999;
+
+                    var lowestRisk = 0;
+                    if (x == 0 && y == 0) lowestRisk = 0;
+                    else if (x == 0) lowestRisk = upCoordRisk < rightCoordRisk ? upCoordRisk + currentCoord.Item1 : rightCoordRisk;
+                    else if (y == 0) lowestRisk = leftCoordRisk < downCoordRisk ? leftCoordRisk + currentCoord.Item1 : downCoordRisk;
+                    else lowestRisk = new List<int> {  upCoordRisk, leftCoordRisk, downCoordRisk, rightCoordRisk }.Min() + currentCoord.Item1;
+
+                    if (lowestRisk != currentCoord.Item2)
+                    {
+                        map[currentCoordKey] = new Tuple<int, int>(currentCoord.Item1, lowestRisk);
+                        changes = true;
+                    }
+                }
+            }
+
+            return changes;
         }
 
         private static void FindPaths(Dictionary<string, Tuple<int, int>> map)
