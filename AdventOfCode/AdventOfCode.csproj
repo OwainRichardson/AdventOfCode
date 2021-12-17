@@ -379,6 +379,7 @@
     <Compile Include="2021\Models\Octopus.cs" />
     <Compile Include="2021\Models\PolyRule.cs" />
     <Compile Include="Common\CustomConsoleColour.cs" />
+    <Compile Include="Common\IntegerExtensions.cs" />
     <Compile Include="Common\ListExtensions.cs" />
     <Compile Include="Common\DictionaryExtensions.cs" />
     <Compile Include="Common\StringExtensions.cs" />

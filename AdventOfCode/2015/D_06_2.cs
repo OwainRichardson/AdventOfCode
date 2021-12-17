@@ -1,11 +1,7 @@
 ﻿using AdventOfCode._2015.Models;
 using AdventOfCode.Common;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AdventOfCode._2015
 {

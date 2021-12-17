@@ -1,5 +1,4 @@
 ﻿using AdventOfCode._2021.Extensions;
-using AdventOfCode._2021.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;

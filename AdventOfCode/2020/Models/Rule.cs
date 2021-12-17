@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace AdventOfCode._2020.Models
+﻿namespace AdventOfCode._2020.Models
 {
     public class Rule
     {
