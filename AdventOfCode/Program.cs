@@ -97,9 +97,14 @@ namespace AdventOfCode
             //_2021.D_15_2.Execute();
             Console.WriteLine();
 
-            Console.WriteLine("Day 16");
-            _2021.D_16_1.Execute();
-            _2021.D_16_2.Execute();
+            //Console.WriteLine("Day 16");
+            //_2021.D_16_1.Execute();
+            //_2021.D_16_2.Execute();
+            //Console.WriteLine();
+
+            Console.WriteLine("Day 17");
+            _2021.D_17_1.Execute();
+            _2021.D_17_2.Execute();
             Console.WriteLine();
         }
 
