@@ -27,5 +27,15 @@ namespace AdventOfCode._2021.Extensions
 
             return product;
         }
+
+        public static List<int> TryAdd(this List<int> list, int value)
+        {
+            if (!list.Contains(value))
+            {
+                list.Add(value);
+            }
+
+            return list;
+        }
     }
 }

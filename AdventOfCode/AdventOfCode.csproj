@@ -334,6 +334,16 @@
     <Compile Include="2020\Models\SledgeDirection.cs" />
     <Compile Include="2020\Models\Ticket.cs" />
     <Compile Include="2020\Models\TicketField.cs" />
+    <Compile Include="2021\D_21_2.cs" />
+    <Compile Include="2021\D_24_1.cs" />
+    <Compile Include="2021\D_22_2.cs" />
+    <Compile Include="2021\D_22_1.cs" />
+    <Compile Include="2021\D_21_1.cs" />
+    <Compile Include="2021\D_20_2.cs" />
+    <Compile Include="2021\D_20_1.cs" />
+    <Compile Include="2021\D_19_1.cs" />
+    <Compile Include="2021\D_18_2.cs" />
+    <Compile Include="2021\D_18_1.cs" />
     <Compile Include="2021\D_17_2.cs" />
     <Compile Include="2021\D_17_1.cs" />
     <Compile Include="2021\D_16_2.cs" />
@@ -370,6 +380,8 @@
     <Compile Include="2021\D_01_1.cs" />
     <Compile Include="2021\Extensions\DictionaryExtensions.cs" />
     <Compile Include="2021\Extensions\ListExtensions.cs" />
+    <Compile Include="2021\Extensions\StringExtensions.cs" />
+    <Compile Include="2021\Models\BeaconCoords.cs" />
     <Compile Include="2021\Models\Board.cs" />
     <Compile Include="2021\Models\Cave.cs" />
     <Compile Include="2021\Models\FoldInstruction.cs" />
@@ -377,7 +389,9 @@
     <Compile Include="2021\Models\BoardCoord.cs" />
     <Compile Include="2021\Models\LineCoords.cs" />
     <Compile Include="2021\Models\Octopus.cs" />
+    <Compile Include="2021\Models\Player.cs" />
     <Compile Include="2021\Models\PolyRule.cs" />
+    <Compile Include="2021\Models\Scanner.cs" />
     <Compile Include="Common\CustomConsoleColour.cs" />
     <Compile Include="Common\IntegerExtensions.cs" />
     <Compile Include="Common\ListExtensions.cs" />
@@ -512,6 +526,24 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="2020\Data\day01.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="2021\Data\day24.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="2021\Data\day22.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="2021\Data\day21.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="2021\Data\day20.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="2021\Data\day19.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="2021\Data\day18.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="2021\Data\day17.txt">
