@@ -10,7 +10,7 @@ namespace AdventOfCode
         static void Main(string[] args)
         {
             List<int> years = new List<int> { 2022 };
-            List<int> days = new List<int> { 5 };
+            List<int> days = new List<int> { 6 };
 
             foreach (int year in years)
             {

@@ -392,6 +392,8 @@
     <Compile Include="2021\Models\Player.cs" />
     <Compile Include="2021\Models\PolyRule.cs" />
     <Compile Include="2021\Models\Scanner.cs" />
+    <Compile Include="2022\D_06_2.cs" />
+    <Compile Include="2022\D_06_1.cs" />
     <Compile Include="2022\D_05_2.cs" />
     <Compile Include="2022\D_05_1.cs" />
     <Compile Include="2022\D_04_2.cs" />
@@ -606,6 +608,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="2021\Data\day01.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="2022\Data\day06.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="2022\Data\day05.txt">
