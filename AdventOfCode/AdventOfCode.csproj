@@ -392,6 +392,8 @@
     <Compile Include="2021\Models\Player.cs" />
     <Compile Include="2021\Models\PolyRule.cs" />
     <Compile Include="2021\Models\Scanner.cs" />
+    <Compile Include="2022\D_08_2.cs" />
+    <Compile Include="2022\D_08_1.cs" />
     <Compile Include="2022\D_07_2.cs" />
     <Compile Include="2022\D_07_1.cs" />
     <Compile Include="2022\D_06_2.cs" />
@@ -409,6 +411,7 @@
     <Compile Include="2022\Helpers\Day5.cs" />
     <Compile Include="2022\Models\Directory.cs" />
     <Compile Include="2022\Models\DirectoryFile.cs" />
+    <Compile Include="2022\Models\Tree.cs" />
     <Compile Include="Common\CustomConsoleColour.cs" />
     <Compile Include="Common\IntegerExtensions.cs" />
     <Compile Include="Common\ListExtensions.cs" />
@@ -612,6 +615,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="2021\Data\day01.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="2022\Data\day08.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="2022\Data\day07.txt">
