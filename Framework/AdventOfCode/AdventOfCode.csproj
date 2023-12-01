@@ -39,6 +39,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -392,6 +393,19 @@
     <Compile Include="2021\Models\Player.cs" />
     <Compile Include="2021\Models\PolyRule.cs" />
     <Compile Include="2021\Models\Scanner.cs" />
+    <Compile Include="2022\D_17_1.cs" />
+    <Compile Include="2022\D_16_1.cs" />
+    <Compile Include="2022\D_15_2.cs" />
+    <Compile Include="2022\D_15_1.cs" />
+    <Compile Include="2022\D_14_2.cs" />
+    <Compile Include="2022\D_14_1.cs" />
+    <Compile Include="2022\D_13_1.cs" />
+    <Compile Include="2022\D_12_2.cs" />
+    <Compile Include="2022\D_12_1.cs" />
+    <Compile Include="2022\D_11_2.cs" />
+    <Compile Include="2022\D_11_1.cs" />
+    <Compile Include="2022\D_10_2.cs" />
+    <Compile Include="2022\D_10_1.cs" />
     <Compile Include="2022\D_09_2.cs" />
     <Compile Include="2022\D_09_1.cs" />
     <Compile Include="2022\D_08_2.cs" />
@@ -411,9 +425,15 @@
     <Compile Include="2022\D_01_2.cs" />
     <Compile Include="2022\D_01_1.cs" />
     <Compile Include="2022\Helpers\Day5.cs" />
+    <Compile Include="2022\Models\Range.cs" />
+    <Compile Include="2022\Models\Sensor.cs" />
+    <Compile Include="2022\Models\Coordinate.cs" />
     <Compile Include="2022\Models\Directory.cs" />
     <Compile Include="2022\Models\DirectoryFile.cs" />
+    <Compile Include="2022\Models\Monkey.cs" />
+    <Compile Include="2022\Models\Pair.cs" />
     <Compile Include="2022\Models\Tree.cs" />
+    <Compile Include="2022\Models\Valve.cs" />
     <Compile Include="Common\CustomConsoleColour.cs" />
     <Compile Include="Common\IntegerExtensions.cs" />
     <Compile Include="Common\ListExtensions.cs" />
@@ -617,6 +637,30 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="2021\Data\day01.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="2022\Data\day17.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="2022\Data\day16.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="2022\Data\day15.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="2022\Data\day14.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="2022\Data\day13.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="2022\Data\day12.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="2022\Data\day11.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="2022\Data\day10.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="2022\Data\day09.txt">
