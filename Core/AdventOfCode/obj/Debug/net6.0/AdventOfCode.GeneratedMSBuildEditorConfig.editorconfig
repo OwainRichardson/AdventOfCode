@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AdventOfCode
-build_property.ProjectDir = C:\Source\Fun\AdventOfCode\Core\AdventOfCode\
+build_property.ProjectDir = D:\Code\Fun\AdventOfCode\Core\AdventOfCode\
