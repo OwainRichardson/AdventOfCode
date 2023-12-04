@@ -8,10 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="2023\Data\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <None Update="2023\Data\day03.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="2023\Data\day02.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="2023\Data\day01.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
