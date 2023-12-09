@@ -3,8 +3,8 @@
 using AdventOfCode.Common;
 using System.Reflection;
 
-List<int> years = new List<int> { 2018 };
-List<int> days = new List<int> { 6 };
+List<int> years = new List<int> { 2023 };
+List<int> days = new List<int> { 1, 2, 3, 4, 6, 7, 9 };
 
 foreach (int year in years)
 {

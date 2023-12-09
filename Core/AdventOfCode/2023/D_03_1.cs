@@ -20,7 +20,7 @@ namespace AdventOfCode._2023
                 part.IsPart = adjacentSymbols;
             }
 
-            Console.Write(engineParts.Where(ep => ep.IsPart).Sum(ep => int.Parse(ep.Value)));
+            Console.WriteLine(engineParts.Where(ep => ep.IsPart).Sum(ep => int.Parse(ep.Value)));
         }
 
         private static List<EnginePart> ParseInputsToEngineParts(string[] inputs)
