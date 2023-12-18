@@ -4,7 +4,7 @@ using AdventOfCode.Common;
 using System.Reflection;
 
 List<int> years = new List<int> { 2023 };
-List<int> days = new List<int> { 1, 2, 3, 4, 6, 7, 9 };
+List<int> days = new List<int> { 17 };
 
 foreach (int year in years)
 {
@@ -23,6 +23,8 @@ foreach (int year in years)
         for (int i = 1; i <= 2; i++)
         {
             Type executingClass = Type.GetType($"AdventOfCode._{year}.D_{day.ToTwoFigures()}_{i}");
+
+            if (executingClass == null) continue;
 
             try
             {
