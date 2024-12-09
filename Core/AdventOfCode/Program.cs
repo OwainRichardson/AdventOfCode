@@ -4,7 +4,7 @@ using AdventOfCode.Common;
 using System.Reflection;
 
 List<int> years = new List<int> { 2024};
-List<int> days = new List<int> { 8 };
+List<int> days = new List<int> { 9 };
 
 foreach (int year in years)
 {
