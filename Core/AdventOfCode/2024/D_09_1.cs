@@ -1,11 +1,4 @@
-﻿using AdventOfCode._2024.Models;
-using AdventOfCode._2024.Models.Enums;
-using System.IO.MemoryMappedFiles;
-using System.Reflection.Metadata.Ecma335;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Linq;
-using System.Net.Http.Headers;
+﻿using System.Diagnostics;
 
 namespace AdventOfCode._2024
 {
@@ -15,50 +8,48 @@ namespace AdventOfCode._2024
         {
             string input = File.ReadAllLines(@"2024\Data\day09.txt")[0];
 
-            List<string> memoryBlocks = CreateMemoryBlocks(input);
+            List<long> memoryBlocks = CreateMemoryBlocks(input);
 
             CondenseMemory(memoryBlocks);
 
             long total = 0;
             for (int index = 0; index < memoryBlocks.Count; index++)
             {
-                if (memoryBlocks[index] == ".") break;
+                if (memoryBlocks[index] == -1) break;
 
-                total += (index * long.Parse(memoryBlocks[index]));
+                total += (index * memoryBlocks[index]);
             }
-
             Console.WriteLine(total);
         }
 
-        private static void CondenseMemory(List<string> memoryBlocks)
+        private static void CondenseMemory(List<long> memoryBlocks)
         {
-            int indexOfFirstDot = memoryBlocks.IndexOf(".");
-            string lastValue = memoryBlocks.Last(m => m != ".");
+            int indexOfFirstDot = memoryBlocks.IndexOf(-1);
+            long lastValue = memoryBlocks.Last(m => m != -1);
             int lastIndexOfValue = memoryBlocks.LastIndexOf(lastValue);
 
             while (indexOfFirstDot < lastIndexOfValue)
             {
                 memoryBlocks[indexOfFirstDot] = lastValue;
-                memoryBlocks[lastIndexOfValue] = ".";
                 memoryBlocks.RemoveAt(lastIndexOfValue);
 
-                indexOfFirstDot = memoryBlocks.IndexOf(".");
-                lastValue = memoryBlocks.Last(m => m != ".");
+                indexOfFirstDot = memoryBlocks.IndexOf(-1);
+                lastValue = memoryBlocks.Last(m => m != -1);
                 lastIndexOfValue = memoryBlocks.LastIndexOf(lastValue);
             }
         }
 
-        private static List<string> CreateMemoryBlocks(string input)
+        private static List<long> CreateMemoryBlocks(string input)
         {
             int number = 0;
-            List<string> memoryBlocks = new List<string>();
+            List<long> memoryBlocks = new List<long>();
 
             for (int index = 0; index < input.Length; index += 2)
             {
                 int numberOfBlocks = int.Parse(input[index].ToString());
                 for (int n = 1; n <= numberOfBlocks; n++)
                 {
-                    memoryBlocks.Add(number.ToString());
+                    memoryBlocks.Add(number);
                 }
 
                 if (index + 1 < input.Length)
@@ -68,7 +59,7 @@ namespace AdventOfCode._2024
                     {
                         for (int g = 1; g <= gap; g++)
                         {
-                            memoryBlocks.Add(".");
+                            memoryBlocks.Add(-1);
                         }
                     }
                 }

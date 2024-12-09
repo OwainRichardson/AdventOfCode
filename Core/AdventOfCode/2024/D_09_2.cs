@@ -6,6 +6,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Linq;
 using System.Net.Http.Headers;
+using System.Diagnostics;
 
 namespace AdventOfCode._2024
 {
@@ -26,7 +27,6 @@ namespace AdventOfCode._2024
 
                 total += index * memoryBlocks[index];
             }
-
             Console.WriteLine(total);
         }
 
