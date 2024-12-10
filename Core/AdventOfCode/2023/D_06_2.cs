@@ -1,6 +1,4 @@
-﻿using System.Numerics;
-
-namespace AdventOfCode._2023
+﻿namespace AdventOfCode._2023
 {
     public static class D_06_2
     {

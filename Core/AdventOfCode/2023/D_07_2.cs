@@ -1,8 +1,5 @@
 ﻿using AdventOfCode._2023.Models;
 using AdventOfCode._2023.Models.Enums;
-using System.Data.Common;
-using System.Security.Cryptography.X509Certificates;
-using System.Text.RegularExpressions;
 
 namespace AdventOfCode._2023
 {

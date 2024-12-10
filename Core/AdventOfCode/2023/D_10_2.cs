@@ -1,6 +1,5 @@
 ﻿using AdventOfCode._2023.Models;
 using AdventOfCode._2023.Models.Enums;
-using System.Xml.Serialization;
 
 namespace AdventOfCode._2023
 {

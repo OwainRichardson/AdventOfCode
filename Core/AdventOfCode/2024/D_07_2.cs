@@ -1,13 +1,4 @@
-﻿using AdventOfCode._2024.Models;
-using AdventOfCode._2024.Models.Enums;
-using System.IO.MemoryMappedFiles;
-using System.Reflection.Metadata.Ecma335;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Linq;
-using System.Net.Http.Headers;
-
-namespace AdventOfCode._2024
+﻿namespace AdventOfCode._2024
 {
     public static class D_07_2
     {

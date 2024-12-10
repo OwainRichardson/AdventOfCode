@@ -1,7 +1,4 @@
 ﻿using AdventOfCode._2024.Models;
-using System.Reflection.Metadata.Ecma335;
-using System.Text;
-using System.Text.RegularExpressions;
 
 namespace AdventOfCode._2024
 {

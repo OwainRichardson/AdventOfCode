@@ -1,7 +1,4 @@
-﻿using System.Reflection.Metadata.Ecma335;
-using System.Text.RegularExpressions;
-
-namespace AdventOfCode._2024
+﻿namespace AdventOfCode._2024
 {
     public static class D_04_1
     {
