@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using AdventOfCode.Common;
+using System.Diagnostics;
 using System.Reflection;
 
 List<int> years = new List<int> { 2024 };
@@ -34,7 +35,16 @@ foreach (int year in years)
                 Console.Write($"{i}: ");
                 Console.ForegroundColor = ConsoleColor.White;
 
-                method.Invoke(null, null);
+                Stopwatch stopwatch = new Stopwatch();
+                stopwatch.Start();
+                object value = method.Invoke(null, null);
+                Console.Write((string)value);
+                stopwatch.Stop();
+
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.Write($" in {stopwatch.Elapsed.TotalMilliseconds}ms");
+                Console.WriteLine();
+                Console.ForegroundColor = ConsoleColor.White;
             }
             catch
             {

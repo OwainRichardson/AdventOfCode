@@ -5,7 +5,7 @@ namespace AdventOfCode._2024
 {
     public static class D_11_1
     {
-        public static void Execute()
+        public static string Execute()
         {
             string input = File.ReadAllLines(@"2024\Data\day11.txt")[0];
 
@@ -42,7 +42,7 @@ namespace AdventOfCode._2024
                 loops++;
             }
 
-            Console.WriteLine(stones.Sum(s => s.Value));
+            return stones.Sum(s => s.Value).ToString();
         }
 
         private static Dictionary<long, long> ParseInputs(string input)
