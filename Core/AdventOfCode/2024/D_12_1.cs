@@ -11,34 +11,8 @@ namespace AdventOfCode._2024
 
             List<GardenCoord> garden = ParseInputs(inputs);
 
-            int groupId = 0;
-            foreach (GardenCoord coord in garden)
-            {
-                List<GardenCoord> localCoords = GetLocalCoords(garden, coord);
-                coord.NumberOfFences = (4 - localCoords.Count) + localCoords.Count(lc => lc.Value != coord.Value);
-
-                // ToDo: fix this bit
-                if (coord.Group != -1)
-                {
-                    foreach (var localCoord in localCoords.Where(lc => lc.Value == coord.Value))
-                    {
-                        localCoord.Group = coord.Group;
-                    }
-                }
-                else if (localCoords.Any(lc => lc.Value == coord.Value && lc.Group != -1))
-                {
-                    coord.Group = localCoords.First(lc => lc.Value == coord.Value && lc.Group != -1).Group;
-                    foreach (var localCoord in localCoords.Where(lc => lc.Value == coord.Value))
-                    {
-                        localCoord.Group = coord.Group;
-                    }
-                }
-                else
-                {
-                    coord.Group = groupId;
-                    groupId++;
-                }
-            }
+            CountFences(garden);
+            CalculateGroups(garden);
 
             if (garden.Any(c => c.Group == -1))
             {
@@ -51,12 +25,57 @@ namespace AdventOfCode._2024
 
             foreach (int group in groupIds)
             {
-                Console.WriteLine(garden.Where(g => g.Group == group).Sum(g => g.NumberOfFences) + "*" + garden.Count(g => g.Group == group));
-
                 total += (garden.Where(g => g.Group == group).Sum(g => g.NumberOfFences) * garden.Count(g => g.Group == group));
             }
 
             return total.ToString();
+        }
+
+        private static void CalculateGroups(List<GardenCoord> garden)
+        {
+            int group = 0;
+            foreach (GardenCoord coord in garden)
+            {
+                if (coord.Group == -1)
+                {
+                    coord.Group = group;
+                    PopulateGroups(garden, coord, group);
+
+                    group++;
+                }
+            }
+        }
+
+        private static void PopulateGroups(List<GardenCoord> garden, GardenCoord coord, int group)
+        {
+            bool changesMade = true;
+
+            while (changesMade)
+            {
+                changesMade = false;
+
+                List<GardenCoord> localCoords = GetLocalCoords(garden, coord).Where(lc => lc.Value == coord.Value).ToList();
+
+                foreach (GardenCoord localCoord in localCoords)
+                {
+                    if (localCoord.Group == -1)
+                    {
+                        localCoord.Group = group;
+
+                        PopulateGroups(garden, localCoord, group);
+                        changesMade = true;
+                    }
+                }
+            }
+        }
+
+        private static void CountFences(List<GardenCoord> garden)
+        {
+            foreach (GardenCoord coord in garden)
+            {
+                List<GardenCoord> localCoords = GetLocalCoords(garden, coord);
+                coord.NumberOfFences = (4 - localCoords.Count) + localCoords.Count(lc => lc.Value != coord.Value);
+            }
         }
 
         private static List<GardenCoord> GetLocalCoords(List<GardenCoord> garden, GardenCoord currentCoord)
