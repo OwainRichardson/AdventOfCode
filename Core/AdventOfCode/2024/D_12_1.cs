@@ -17,6 +17,7 @@ namespace AdventOfCode._2024
                 List<GardenCoord> localCoords = GetLocalCoords(garden, coord);
                 coord.NumberOfFences = (4 - localCoords.Count) + localCoords.Count(lc => lc.Value != coord.Value);
 
+                // TODo: this bit isnt working properly
                 if (localCoords.Any(lc => lc.Value == coord.Value && lc.Group != -1))
                 {
                     coord.Group = localCoords.First(lc => lc.Value == coord.Value && lc.Group != -1).Group;
@@ -28,7 +29,23 @@ namespace AdventOfCode._2024
                 }
             }
 
-            return "";
+            if (garden.Any(c => c.Group == -1))
+            {
+                throw new InvalidOperationException();
+            }
+
+            long total = 0;
+
+            List<int> groupIds = garden.Select(g => g.Group).Distinct().ToList();
+
+            foreach (int group in groupIds)
+            {
+                Console.WriteLine(garden.Where(g => g.Group == group).Sum(g => g.NumberOfFences) + "*" + garden.Count(g => g.Group == group));
+
+                total += (garden.Where(g => g.Group == group).Sum(g => g.NumberOfFences) * garden.Count(g => g.Group == group));
+            }
+
+            return total.ToString();
         }
 
         private static List<GardenCoord> GetLocalCoords(List<GardenCoord> garden, GardenCoord currentCoord)
