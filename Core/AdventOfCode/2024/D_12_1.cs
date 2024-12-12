@@ -17,10 +17,21 @@ namespace AdventOfCode._2024
                 List<GardenCoord> localCoords = GetLocalCoords(garden, coord);
                 coord.NumberOfFences = (4 - localCoords.Count) + localCoords.Count(lc => lc.Value != coord.Value);
 
-                // TODo: this bit isnt working properly
-                if (localCoords.Any(lc => lc.Value == coord.Value && lc.Group != -1))
+                // ToDo: fix this bit
+                if (coord.Group != -1)
+                {
+                    foreach (var localCoord in localCoords.Where(lc => lc.Value == coord.Value))
+                    {
+                        localCoord.Group = coord.Group;
+                    }
+                }
+                else if (localCoords.Any(lc => lc.Value == coord.Value && lc.Group != -1))
                 {
                     coord.Group = localCoords.First(lc => lc.Value == coord.Value && lc.Group != -1).Group;
+                    foreach (var localCoord in localCoords.Where(lc => lc.Value == coord.Value))
+                    {
+                        localCoord.Group = coord.Group;
+                    }
                 }
                 else
                 {
