@@ -5,7 +5,7 @@ using System.Diagnostics;
 using System.Reflection;
 
 List<int> years = new List<int> { 2024 };
-List<int> days = new List<int> { 11 };
+List<int> days = new List<int> { 12 };
 
 foreach (int year in years)
 {
