@@ -5,7 +5,7 @@ using System.Diagnostics;
 using System.Reflection;
 
 List<int> years = new List<int> { 2024 };
-List<int> days = new List<int> { 12 };
+List<int> days = new List<int> { 15 };
 
 foreach (int year in years)
 {
@@ -54,6 +54,7 @@ foreach (int year in years)
 
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.Write($"NOT CREATED");
+                Console.WriteLine();
                 Console.ForegroundColor = ConsoleColor.White;
             }
         }
