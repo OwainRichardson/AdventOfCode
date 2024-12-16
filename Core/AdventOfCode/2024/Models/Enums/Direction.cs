@@ -5,6 +5,10 @@
         Up = 1,
         Down,
         Left,
-        Right
+        Right,
+        North,
+        East,
+        South,
+        West
     }
 }
