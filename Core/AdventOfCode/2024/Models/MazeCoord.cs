@@ -9,5 +9,6 @@ namespace AdventOfCode._2024.Models
         public bool IsStart { get; set; }
         public bool IsEnd { get; set; }
         public Direction RelativeLocation { get; set; }
+        public int Distance { get; set; }
     }
 }

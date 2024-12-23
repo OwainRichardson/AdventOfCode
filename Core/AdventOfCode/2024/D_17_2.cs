@@ -9,9 +9,10 @@ namespace AdventOfCode._2024
         {
             string[] inputs = File.ReadAllLines(@"2024\Data\day17.txt");
 
-            int registerA = 0;
+            int registerA = 766369050;
+            int max = 1500000000;
 
-            while (true)
+            while (registerA <= max)
             {
                 (Dictionary<string, long> registers, string instructions) = ParseInputs(inputs);
                 int[] ops = instructions.Split(',').Select(i => int.Parse(i)).ToArray();
