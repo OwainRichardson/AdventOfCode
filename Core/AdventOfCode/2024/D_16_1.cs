@@ -15,28 +15,46 @@ namespace AdventOfCode._2024
             List<MazeCoord> maze = ParseInputs(inputs);
             Direction direction = Direction.East;
 
-            FindPaths(maze, maze.Single(m => m.IsStart), direction);
+            MazeCoord start = maze.Single(m => m.IsStart);
+            start.RelativeLocation = Direction.East;
 
-            return "Incomplete";
+            FindPaths(maze, start, new List<string>(), direction);
+
+            return LowestScore.ToString();
         }
 
-        private static void FindPaths(List<MazeCoord> maze, MazeCoord current, Direction direction, int score = 0)
+        private static void FindPaths(List<MazeCoord> maze, MazeCoord current, List<string> previousPath, Direction direction)
         {
-            List<MazeCoord> possibleMoves = CalculatePossibleMoves(maze, current, direction)
-                                                .Where(c => !c.IsWall)
+            if (previousPath.Contains($"{current.X}:{current.Y}"))
+            {
+                return;
+            }
+
+            direction = current.RelativeLocation;
+
+            previousPath.Add($"{current.X}:{current.Y}");
+
+            if (CalculateScore(previousPath) > LowestScore) return;
+
+            List<MazeCoord> possibleMoves = CalculatePossibleMoves(maze, current)
+                                                .Where(c => !c.IsWall
+                                                          && !previousPath.Contains($"{c.X}:{c.Y}"))
                                                 .ToList();
 
             if (possibleMoves.Any(c => c.IsEnd))
             {
+                int score = CalculateScore(previousPath);
                 if (score < LowestScore)
                 {
-                    LowestScore = score;
+                    LowestScore = score + 1;
                 }
+
+                //MapPath(maze, previousPath, score);
 
                 return;
             }
 
-            if (possibleMoves.Count == 0 )
+            if (possibleMoves.Count == 0)
             {
                 Task.Delay(10);
 
@@ -45,43 +63,98 @@ namespace AdventOfCode._2024
 
             foreach (MazeCoord possibleMove in possibleMoves)
             {
-                FindPaths(maze, possibleMove, possibleMove.RelativeLocation, score + 1 + Turned(direction, possibleMove.RelativeLocation));
+                FindPaths(maze, possibleMove, new List<string>(previousPath), direction);
             }
         }
 
-        private static int Turned(Direction direction, Direction relativeLocation)
+        private static int CalculateScore(List<string> previousPath)
         {
-            if (direction != relativeLocation)
+            int score = 0;
+            Direction direction = Direction.East;
+            for (int index = 0; index < previousPath.Count - 1; index++)
             {
-                return 1000;
+                string currentCoord = previousPath[index];
+                string nextCoord = previousPath[index + 1];
+
+                int[] currentSplit = currentCoord.Split(':').Select(s => int.Parse(s)).ToArray();
+                int[] nextSplit = nextCoord.Split(':').Select(s => int.Parse(s)).ToArray();
+
+                if (currentSplit[1] < nextSplit[1])
+                {
+                    Direction directionOfTravel = Direction.North;
+                    if (direction != directionOfTravel)
+                    {
+                        direction = directionOfTravel;
+                        score += 1000;
+                    }
+                }
+                else if (currentSplit[1] > nextSplit[1])
+                {
+                    Direction directionOfTravel = Direction.South;
+                    if (direction != directionOfTravel)
+                    {
+                        direction = directionOfTravel;
+                        score += 1000;
+                    }
+                }
+                else if (currentSplit[0] > nextSplit[0])
+                {
+                    Direction directionOfTravel = Direction.West;
+                    if (direction != directionOfTravel)
+                    {
+                        direction = directionOfTravel;
+                        score += 1000;
+                    }
+                }
+                else if (currentSplit[0] < nextSplit[0])
+                {
+                    Direction directionOfTravel = Direction.East;
+                    if (direction != directionOfTravel)
+                    {
+                        direction = directionOfTravel;
+                        score += 1000;
+                    }
+                }
+
+                score += 1;
             }
 
-            return 0;
+            return score;
         }
 
-        private static List<MazeCoord> CalculatePossibleMoves(List<MazeCoord> maze, MazeCoord current, Direction direction)
+        private static void MapPath(List<MazeCoord> maze, List<string> previousPath, int score = 0)
+        {
+            Console.WriteLine(score);
+
+            for (int y = 0; y <= maze.Max(m => m.Y); y++)
+            {
+                for (int x = 0; x <= maze.Max(m => m.X); x++)
+                {
+                    MazeCoord current = maze.First(c => c.Y == y && c.X == x);
+
+                    if (current.IsStart) Console.Write("S");
+                    else if (current.IsEnd) Console.Write("E");
+                    else if (current.IsWall) Console.Write("#");
+                    else if (previousPath.Contains($"{current.X}:{current.Y}")) Console.Write("^");
+                    else Console.Write(" ");
+                }
+
+                Console.WriteLine();
+            }
+        }
+
+        private static List<MazeCoord> CalculatePossibleMoves(List<MazeCoord> maze, MazeCoord current)
         {
             MazeCoord north = maze.First(m => m.X == current.X && m.Y == current.Y - 1);
             north.RelativeLocation = Direction.North;
             MazeCoord south = maze.First(m => m.X == current.X && m.Y == current.Y + 1);
             south.RelativeLocation = Direction.South;
-            MazeCoord west = maze.First(m => m.X == current.X - 1&& m.Y == current.Y);
+            MazeCoord west = maze.First(m => m.X == current.X - 1 && m.Y == current.Y);
             west.RelativeLocation = Direction.West;
             MazeCoord east = maze.First(m => m.X == current.X + 1 && m.Y == current.Y);
             east.RelativeLocation = Direction.East;
 
-            switch (direction)
-            {
-                case Direction.North:
-                    return new List<MazeCoord> { north, west, east };
-                case Direction.East:
-                    return new List<MazeCoord> { south, east, north };
-                case Direction.South:
-                    return new List<MazeCoord> { south, east, west };
-                case Direction.West:
-                    return new List<MazeCoord> { north, west, south };
-                default: throw new InvalidOperationException();
-            }
+            return new List<MazeCoord> { north, east, south, west };
         }
 
         private static List<MazeCoord> ParseInputs(string[] inputs)
