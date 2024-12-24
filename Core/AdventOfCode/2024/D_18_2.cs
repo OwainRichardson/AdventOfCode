@@ -6,11 +6,14 @@ namespace AdventOfCode._2024
     {
         public static string Execute()
         {
+            string[] inputs = File.ReadAllLines(@"2024\Data\day18.txt");
+
             int lastTake = -1;
 
-            string[] inputs = File.ReadAllLines(@"2024\Data\day18.txt");
             for (int take = 1024; take <= inputs.Length; take++)
             {
+                lastTake = take;
+
                 List<MazeCoord> map = ParseInputs(inputs.Take(take).ToArray());
                 map = PadMap(map);
 
@@ -24,7 +27,6 @@ namespace AdventOfCode._2024
 
                 if (map.Single(m => m.IsEnd).Distance == int.MaxValue)
                 {
-                    lastTake = take;
                     break;
                 }
             }
@@ -34,30 +36,32 @@ namespace AdventOfCode._2024
 
         private static void CalculateDistances(List<MazeCoord> map)
         {
-            bool changeMade = false;
-            
-            foreach (MazeCoord currentCoord in map.Where(m => m.Distance != int.MaxValue))
-            {
-                if (currentCoord.IsEnd) break;
+            Queue<MazeCoord> queue = new Queue<MazeCoord>();
+            queue.Enqueue(map.Single(m => m.X == 0 && m.Y == 0));
 
-                List<MazeCoord> localCoords = GetLocalCoords(currentCoord, map);
+            while (queue.Count > 0)
+            {
+                MazeCoord current = queue.Dequeue();
+                if (current.IsEnd) break;
+
+                List<MazeCoord> localCoords = GetLocalCoords(current, map);
 
                 foreach (MazeCoord local in localCoords)
                 {
                     if (local.IsWall) continue;
 
-                    if (currentCoord.Distance + 1 < local.Distance)
+                    if (current.Distance + 1 < local.Distance)
                     {
-                        local.Distance = currentCoord.Distance + 1;
-                        changeMade = true;
+                        local.Distance = current.Distance + 1;
+
+                        queue = new Queue<MazeCoord>(queue.Where(q => q.Id != $"{local.X}:{local.Y}"));
+                        queue.Enqueue(local);
                     }
                 }
             }
-
-            if (changeMade) CalculateDistances(map);
         }
 
-        private static void PrintWarehouse(List<MazeCoord> map)
+        private static void PrintMap(List<MazeCoord> map)
         {
             Console.WriteLine();
 
@@ -67,8 +71,11 @@ namespace AdventOfCode._2024
                 {
                     MazeCoord coord = map.First(w => w.X == x && w.Y == y);
 
-                    if (coord.IsWall) Console.Write("#");
-                    else Console.Write(".");
+                    if (coord.IsWall) Console.Write("  #  ");
+                    else if (coord.Distance == int.MaxValue) Console.Write("  .  ");
+                    else Console.Write($"  {coord.Distance} ");
+
+                    if (coord.Distance <= 9 && !coord.IsWall) Console.Write(" ");
                 }
 
                 Console.WriteLine();
@@ -115,7 +122,7 @@ namespace AdventOfCode._2024
                     MazeCoord coord = map.FirstOrDefault(m => m.X == x && m.Y == y);
                     if (coord == null)
                     {
-                        map.Add(new MazeCoord { X = x, Y = y, IsWall = false, Distance = int.MaxValue, Value = '.' });
+                        map.Add(new MazeCoord { X = x, Y = y, IsWall = false, Distance = int.MaxValue, Value = '.', Id = $"{x}:{y}" });
                     }
                 }
             }
@@ -131,7 +138,7 @@ namespace AdventOfCode._2024
             {
                 int[] split = input.Split(',').Select(i => int.Parse(i)).ToArray();
 
-                map.Add(new MazeCoord { X = split[0], Y = split[1], IsWall = true, Distance = int.MaxValue });
+                map.Add(new MazeCoord { X = split[0], Y = split[1], IsWall = true, Distance = int.MaxValue, Id = $"{split[0]}:{split[1]}" });
             }
 
             return map;

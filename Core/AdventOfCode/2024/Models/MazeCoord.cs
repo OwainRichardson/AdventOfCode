@@ -4,6 +4,7 @@ namespace AdventOfCode._2024.Models
 {
     public class MazeCoord : Coord
     {
+        public string Id { get; set; }
         public bool IsWall { get; set; }
         public char Value { get; set; }
         public bool IsStart { get; set; }
