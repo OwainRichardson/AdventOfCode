@@ -1,7 +1,4 @@
-﻿using AdventOfCode._2024.Models;
-using System.Xml.Schema;
-
-namespace AdventOfCode._2024
+﻿namespace AdventOfCode._2024
 {
     public static class D_19_1
     {

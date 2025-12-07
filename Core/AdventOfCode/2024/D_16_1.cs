@@ -1,6 +1,5 @@
 ﻿using AdventOfCode._2024.Models;
 using AdventOfCode._2024.Models.Enums;
-using System.Security.Cryptography.X509Certificates;
 
 namespace AdventOfCode._2024
 {

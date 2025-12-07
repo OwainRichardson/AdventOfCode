@@ -1,13 +1,7 @@
-﻿using AdventOfCode._2018.Models;
-using AdventOfCode._2024.Extensions;
-using AdventOfCode._2024.Models;
+﻿using AdventOfCode._2024.Models;
 using AdventOfCode._2024.Models.Enums;
 using System.Data;
-using System.Runtime.InteropServices;
-using System.Security.AccessControl;
 using System.Text;
-using System.Text.RegularExpressions;
-using System.Xml.Schema;
 
 namespace AdventOfCode._2024
 {

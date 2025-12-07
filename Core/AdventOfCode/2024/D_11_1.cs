@@ -1,5 +1,4 @@
 ﻿using AdventOfCode._2024.Extensions;
-using AdventOfCode._2024.Models;
 
 namespace AdventOfCode._2024
 {
